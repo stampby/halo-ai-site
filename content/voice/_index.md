@@ -4,6 +4,8 @@ description: "Clone any voice with 30 seconds of audio. Text-to-speech, speech-t
 ---
 
 
+*No autotune. No filter. Just raw performance from a real person, delivered by AI.*
+
 Your voice. Your hardware. Nobody else's business.
 
 halo-ai's voice platform handles synthesis, recognition, and cloning -- all running locally, all private by default. Thirty seconds of reference audio is enough to build a voice model. That model never leaves your machine.
@@ -41,11 +43,19 @@ Dynamic character dialog generated in real time. Dealer writes the lines, the vo
 ### Live Streaming Co-Host
 A real-time voice companion for streams. Responds to chat, comments on gameplay, and maintains a consistent persona throughout the broadcast. Low latency. Natural cadence.
 
-## The Philosophy — AI Serves Musicians, Not Replaces Them
+## The Business Model
 
-This is not about replacing guitar players, drummers, or producers. If a human can physically do it — play an instrument, turn a wrench, build a building — let the human do it.
+**Songwriter writes. Producer produces. Your voice performs. AI delivers.**
+
+Three humans. One machine. Everyone does their job. Nobody gets replaced.
+
+A songwriter writes lyrics. A producer arranges the track. Real musicians play real instruments. The voice model delivers the vocal performance — raw, unfiltered, no autotune. AI is the transport layer, not the creator.
+
+This is not about replacing guitar players, drummers, producers, or songwriters. If a human can physically do it — play an instrument, write a lyric, turn a knob — let the human do it.
 
 The voice pipeline exists to put a real person's voice where that person cannot physically be. A singer in New Brunswick collaborating with a producer in Sarasota. A narrator reading a manuscript at 3 AM while the author sleeps. A voice actor performing in six languages without leaving home.
+
+Not every artist writes their own lyrics. Ozzy barely wrote any. But he PERFORMED them. The performance is the product. The voice is the instrument. AI just gets it to the room.
 
 AI handles what keyboards handle — text, data, generation, processing. Humans do what humans do — play guitar, hit drums, create with their hands. The line is clear.
 
