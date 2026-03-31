@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tutorials | halo-ai — Local AI, Zero Cloud</title>
+<meta name="description" content="24 video walkthroughs — start to finish, nothing skipped. Terminal recordings live now. Voice narration coming soon.">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+
+</head>
+<body>
+    <nav>
+    <a href="/" class="logo">halo-<span>ai</span></a>
+    <div class="links">
+        
+        
+        <a href="/">Home</a>
+        
+        
+        
+        <a href="/install/">Install</a>
+        
+        
+        
+        <a href="/tutorials/">Tutorials</a>
+        
+        
+        
+        <a href="/agents/">Agents</a>
+        
+        
+        
+        <a href="/docs/">Docs</a>
+        
+        
+        
+        <a href="/benchmarks/">Benchmarks</a>
+        
+        
+        
+        <a href="/games/">Games</a>
+        
+        
+        
+        <a href="/voice/">Voice</a>
+        
+        
+        
+        <a href="/blog/">Blog</a>
+        
+        
+        
+        <span class="nav-disabled" title="Coming soon">Nexus</span>
+        
+        
+        
+        <a href="https://discord.gg/dSyV646eBs" target="_blank" rel="noopener">Discord</a>
+        
+        
+        
+        <a href="https://github.com/stampby/halo-ai" target="_blank" rel="noopener">GitHub</a>
+        
+        
+    </div>
+</nav>
+
+
+<div class="lang-wheel" id="langWheel">
+    
+    <a href="/en/" data-lang="en" class="lang-locked" onclick="lockLang('en', event)">English</a>
+    
+    <a href="/fr/" data-lang="fr" class="" onclick="lockLang('fr', event)">Francais</a>
+    
+    <a href="/es/" data-lang="es" class="" onclick="lockLang('es', event)">Espanol</a>
+    
+    <a href="/es-mx/" data-lang="es-mx" class="" onclick="lockLang('es-mx', event)">Espanol (Mexico)</a>
+    
+    <a href="/pt-br/" data-lang="pt-br" class="" onclick="lockLang('pt-br', event)">Portugues (Brasil)</a>
+    
+    <a href="/de/" data-lang="de" class="" onclick="lockLang('de', event)">Deutsch</a>
+    
+    <a href="/ja/" data-lang="ja" class="" onclick="lockLang('ja', event)">Japanese</a>
+    
+</div>
+
+    <main>
+        
+<div class="container narrow content">
+    <h1>Tutorials</h1>
+    
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/asciinema-player@3.7.1/dist/bundle/asciinema-player.css" />
+<script src="https://unpkg.com/asciinema-player@3.7.1/dist/bundle/asciinema-player.min.js"></script>
+<style>.ap-wrapper { margin: 1rem 0 2rem; border-radius: 8px; overflow: hidden; }</style>
+<p>24 walkthroughs. Start to finish. Nothing skipped. Click play on any tutorial below. Voice narration coming once the architect&rsquo;s model is trained.</p>
+<hr>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="1-the-vision--what-halo-ai-is-and-why">1. The Vision — what halo-ai is and why</h3>
+<div id="t01"></div>
+<script>AsciinemaPlayer.create('/tutorials/01-install.cast', document.getElementById('t01'), {speed: 1.5, theme: 'monokai', fit: 'width'});</script>
+<h3 id="2-hardware-setup--mesh-wiring-4-machines">2. Hardware Setup — mesh wiring, 4 machines</h3>
+<div id="t02"></div>
+<script>AsciinemaPlayer.create('/tutorials/02-first-chat.cast', document.getElementById('t02'), {speed: 1.5, theme: 'monokai', fit: 'width'});</script>
+<h3 id="3-arch-linux-install--base-os-btrfs-first-boot">3. Arch Linux Install — base OS, btrfs, first boot</h3>
+<div id="t03"></div>
+<script>AsciinemaPlayer.create('/tutorials/03-image-gen.cast', document.getElementById('t03'), {speed: 1.5, theme: 'monokai', fit: 'width'});</script>
+<h3 id="4-the-install-script--13-services-compiled-from-source">4. The Install Script — 13 services compiled from source</h3>
+<div id="t04"></div>
+<script>AsciinemaPlayer.create('/tutorials/04-voice-clone.cast', document.getElementById('t04'), {speed: 1.5, theme: 'monokai', fit: 'width'});</script>
+<h3 id="5-security--nftables-ssh-caddy-deny-all-model">5. Security — nftables, SSH, Caddy, deny-all model</h3>
+<div id="t05"></div>
+<script>AsciinemaPlayer.create('/tutorials/05-ssh-mixer.cast', document.getElementById('t05'), {speed: 1.5, theme: 'monokai', fit: 'width'});</script>
+<hr>
+<h2 id="the-stack">The Stack</h2>
+<h3 id="6-lemonade--llamacpp--unified-api-87-toks">6. Lemonade + llama.cpp — unified API, 87 tok/s</h3>
+<div id="t06"></div>
+<script>AsciinemaPlayer.create('/tutorials/06-free-website.cast', document.getElementById('t06'), {speed: 1.5, theme: 'monokai', fit: 'width'});</script>
+<h3 id="7-chat--rag--open-webui-document-upload-vector-search">7. Chat + RAG — Open WebUI, document upload, vector search</h3>
+<div id="t07"></div>
+<script>AsciinemaPlayer.create('/tutorials/07-discord-bots.cast', document.getElementById('t07'), {speed: 1.5, theme: 'monokai', fit: 'width'});</script>
+<h3 id="8-deep-research--vane-cited-sources-private-search">8. Deep Research — Vane, cited sources, private search</h3>
+<div id="t08"></div>
+<script>AsciinemaPlayer.create('/tutorials/08-glusterfs.cast', document.getElementById('t08'), {speed: 1.5, theme: 'monokai', fit: 'width'});</script>
+<h3 id="9-image-generation--comfyui-on-115gb-gpu">9. Image Generation — ComfyUI on 115GB GPU</h3>
+<div id="t09"></div>
+<script>AsciinemaPlayer.create('/tutorials/09-game-server.cast', document.getElementById('t09'), {speed: 1.5, theme: 'monokai', fit: 'width'});</script>
+<h3 id="10-voice--whispercpp-kokoro-tts-54-voices">10. Voice — whisper.cpp, Kokoro TTS, 54 voices</h3>
+<div id="t10"></div>
+<script>AsciinemaPlayer.create('/tutorials/10-security.cast', document.getElementById('t10'), {speed: 1.5, theme: 'monokai', fit: 'width'});</script>
+<hr>
+<h2 id="automation">Automation</h2>
+<h3 id="11-workflows--n8n-automation-github-webhooks">11. Workflows — n8n automation, GitHub webhooks</h3>
+<div id="t11"></div>
+<script>AsciinemaPlayer.create('/tutorials/11-workflows.cast', document.getElementById('t11'), {speed: 1.5, theme: 'monokai', fit: 'width'});</script>
+<h3 id="12-the-agents--gaia-ui-all-27-agents-management">12. The Agents — Gaia UI, all 27 agents, management</h3>
+<div id="t12"></div>
+<script>AsciinemaPlayer.create('/tutorials/12-agents.cast', document.getElementById('t12'), {speed: 1.5, theme: 'monokai', fit: 'width'});</script>
+<h3 id="13-man-cave--control-center-stack-protection-freezethaw">13. Man Cave — control center, stack protection, freeze/thaw</h3>
+<div id="t13"></div>
+<script>AsciinemaPlayer.create('/tutorials/13-man-cave.cast', document.getElementById('t13'), {speed: 1.5, theme: 'monokai', fit: 'width'});</script>
+<hr>
+<h2 id="infrastructure">Infrastructure</h2>
+<h3 id="14-the-mesh--ssh-keys-4-machines-mixer-shadow">14. The Mesh — SSH keys, 4 machines, mixer, Shadow</h3>
+<div id="t14"></div>
+<script>AsciinemaPlayer.create('/tutorials/14-mesh.cast', document.getElementById('t14'), {speed: 1.5, theme: 'monokai', fit: 'width'});</script>
+<h3 id="15-windows-in-the-mesh--minisforum-vss-terminal">15. Windows in the Mesh — Minisforum, VSS, Terminal</h3>
+<div id="t15"></div>
+<script>AsciinemaPlayer.create('/tutorials/15-windows-mesh.cast', document.getElementById('t15'), {speed: 1.5, theme: 'monokai', fit: 'width'});</script>
+<h3 id="16-discord-bots--echo-bounty-meek-amp-muse-halo">16. Discord Bots — Echo, Bounty, Meek, Amp, Muse, Halo</h3>
+<div id="t16"></div>
+<script>AsciinemaPlayer.create('/tutorials/16-discord-bots.cast', document.getElementById('t16'), {speed: 1.5, theme: 'monokai', fit: 'width'});</script>
+<h3 id="17-reddit-bridge--scan-draft-approve-post">17. Reddit Bridge — scan, draft, approve, post</h3>
+<div id="t17"></div>
+<script>AsciinemaPlayer.create('/tutorials/17-reddit-bridge.cast', document.getElementById('t17'), {speed: 1.5, theme: 'monokai', fit: 'width'});</script>
+<hr>
+<h2 id="voice--audio">Voice &amp; Audio</h2>
+<h3 id="18-audio-chain--sm7b-scarlett-pipewire-routing">18. Audio Chain — SM7B, Scarlett, PipeWire, routing</h3>
+<div id="t18"></div>
+<script>AsciinemaPlayer.create('/tutorials/18-audio-chain.cast', document.getElementById('t18'), {speed: 1.5, theme: 'monokai', fit: 'width'});</script>
+<h3 id="19-voice-cloning--recording-xtts-v2-training">19. Voice Cloning — recording, XTTS v2, training</h3>
+<div id="t19"></div>
+<script>AsciinemaPlayer.create('/tutorials/19-voice-cloning.cast', document.getElementById('t19'), {speed: 1.5, theme: 'monokai', fit: 'width'});</script>
+<hr>
+<h2 id="operations">Operations</h2>
+<h3 id="20-game-servers--linuxgsm-deploy-connect">20. Game Servers — LinuxGSM, deploy, connect</h3>
+<div id="t20"></div>
+<script>AsciinemaPlayer.create('/tutorials/20-game-server.cast', document.getElementById('t20'), {speed: 1.5, theme: 'monokai', fit: 'width'});</script>
+<h3 id="21-glusterfs--replicated-storage-across-machines">21. GlusterFS — replicated storage across machines</h3>
+<div id="t21"></div>
+<script>AsciinemaPlayer.create('/tutorials/21-glusterfs.cast', document.getElementById('t21'), {speed: 1.5, theme: 'monokai', fit: 'width'});</script>
+<h3 id="22-free-website--hugo--cloudflare-zero-cost">22. Free Website — Hugo + Cloudflare, zero cost</h3>
+<div id="t22"></div>
+<script>AsciinemaPlayer.create('/tutorials/22-free-website.cast', document.getElementById('t22'), {speed: 1.5, theme: 'monokai', fit: 'width'});</script>
+<h3 id="23-kansas-city-shuffle--ssh-ring-bus-full-walkthrough">23. Kansas City Shuffle — SSH ring bus, full walkthrough</h3>
+<div id="t23"></div>
+<script>AsciinemaPlayer.create('/tutorials/23-kcs.cast', document.getElementById('t23'), {speed: 1.5, theme: 'monokai', fit: 'width'});</script>
+<h3 id="24-the-security-audit--full-public-audit-no-secrets">24. The Security Audit — full public audit, no secrets</h3>
+<div id="t24"></div>
+<script>AsciinemaPlayer.create('/tutorials/24-security-audit.cast', document.getElementById('t24'), {speed: 1.5, theme: 'monokai', fit: 'width'});</script>
+<hr>
+<p>Voice narration will be added to every tutorial once the architect&rsquo;s voice model is trained via Nexus. Two voice options planned — the architect&rsquo;s voice and a secondary narrator.</p>
+<p>No gatekeeping. No secrets. Everything shown.</p>
+<p><em>Designed and built by the architect.</em></p>
+
+    
+</div>
+
+    </main>
+    <footer>
+    <p><a href="/">halo-ai.studio</a> · <a href="https://github.com/stampby/halo-ai">GitHub</a> · <a href="https://discord.gg/dSyV646eBs">Discord</a> · <a href="https://halo-ai.ca">halo-ai.ca</a></p>
+    <p class="architect">Designed and built by the architect.</p>
+    <a href="/gratitude/" class="gratitude-link">.</a>
+</footer>
+
+    <script src="/js/halo.js"></script>
+</body>
+</html>

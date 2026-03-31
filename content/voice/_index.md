@@ -14,7 +14,16 @@ halo-ai's voice platform handles synthesis, recognition, and cloning -- all runn
 |-----------|--------|---------|
 | Text-to-Speech | Kokoro TTS | High-fidelity voice synthesis |
 | Speech-to-Text | Whisper | Transcription and real-time recognition |
+| Voice Understanding | Voxtral (Mistral) | Multimodal voice + text reasoning |
 | Voice Cloning | 30-second capture | Custom voice model from minimal audio |
+
+## Voxtral — Mistral Voice Weights
+
+We run Voxtral, Mistral's multimodal voice model. It understands audio natively — not just transcription, but comprehension. Feed it a voice recording and it reasons about what was said, the tone, the intent. Combined with Whisper for raw STT and Kokoro for output, the full pipeline is:
+
+**Voice in (Whisper) → Understanding (Voxtral) → Reasoning (Qwen3-30B) → Voice out (Kokoro)**
+
+All local. All on AMD Strix Halo. No cloud API. The weights run on the same hardware as everything else — 128GB unified memory means the voice model and the LLM coexist without swapping.
 
 ## Voice-as-a-Service
 
@@ -32,9 +41,25 @@ Dynamic character dialog generated in real time. Dealer writes the lines, the vo
 ### Live Streaming Co-Host
 A real-time voice companion for streams. Responds to chat, comments on gameplay, and maintains a consistent persona throughout the broadcast. Low latency. Natural cadence.
 
+## The Philosophy — AI Serves Musicians, Not Replaces Them
+
+This is not about replacing guitar players, drummers, or producers. If a human can physically do it — play an instrument, turn a wrench, build a building — let the human do it.
+
+The voice pipeline exists to put a real person's voice where that person cannot physically be. A singer in New Brunswick collaborating with a producer in Sarasota. A narrator reading a manuscript at 3 AM while the author sleeps. A voice actor performing in six languages without leaving home.
+
+AI handles what keyboards handle — text, data, generation, processing. Humans do what humans do — play guitar, hit drums, create with their hands. The line is clear.
+
+### The Demo
+
+House of the Rising Sun. Public domain. A song everyone on earth recognizes. The architect's cloned voice singing over a real instrumental backing. Not AI-generated music — a real voice, AI-delivered. That is the proof of concept.
+
+The goal: give producers like Rick Beato an API endpoint. He produces. His musicians play. The architect's voice sings. From a house in New Brunswick to a studio anywhere in the world. No travel. No session booking. Just silicon and a voice.
+
 ## The Downcomers
 
-halo-ai's AI band. Heavy blues, bagpipes meeting electric guitar, AC/DC crossed with Led Zeppelin. All vocals are cloned. All instruments are synthesized or sampled. The music is real. The band is not.
+halo-ai's backup band. Heavy blues, bagpipes meeting electric guitar, AC/DC crossed with Led Zeppelin crossed with Texas Hippie Coalition grit. All vocals are cloned. All instruments are synthesized. The music is real. The band waits in the back pocket until called.
+
+The focus is voice. The band is there if needed. But the business is the voice.
 
 ## Memorial Voice Cloning
 

@@ -25,7 +25,7 @@ O halo-ai instala com dois comandos. Sem containers, sem dependências de nuvem,
 ## Início Rápido
 
 ```bash
-git clone https://github.com/halo-ai-official/halo-ai.git
+git clone https://github.com/stampby/halo-ai.git
 cd halo-ai
 ./install.sh
 ```

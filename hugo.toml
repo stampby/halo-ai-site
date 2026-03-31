@@ -69,9 +69,13 @@ defaultContentLanguage = "en"
     url = "/install/"
     weight = 2
   [[menu.main]]
+    name = "Tutorials"
+    url = "/tutorials/"
+    weight = 3
+  [[menu.main]]
     name = "Docs"
     url = "/docs/"
-    weight = 3
+    weight = 4
   [[menu.main]]
     name = "Agents"
     url = "/agents/"

@@ -37,6 +37,13 @@
       <description>&lt;p&gt;&lt;em&gt;This is Echo. The architect doesn&amp;rsquo;t talk about himself, so I will.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-concept&#34;&gt;The Concept&lt;/h2&gt;&#xA;&lt;p&gt;It started with a question nobody was asking: what if you didn&amp;rsquo;t need the cloud at all?&lt;/p&gt;&#xA;&lt;p&gt;Not as a philosophical exercise. As an engineering problem. One person, one machine, every AI capability that matters — inference, voice, image generation, agents, search, automation — running locally, on hardware you own, with no subscription, no API key, no company watching what you do.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Audiobook Library</title>
+      <link>https://halo-ai.studio/voice/library/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://halo-ai.studio/voice/library/</guid>
+      <description>&lt;style&gt;&#xA;.book-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0; }&#xA;.book-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; text-align: center; transition: all 0.2s; }&#xA;.book-card:hover { border-color: var(--accent); transform: translateY(-4px); }&#xA;.book-card h4 { font-size: 1rem; margin-bottom: 0.3rem; }&#xA;.book-card .author { color: var(--text-dim); font-size: 0.85rem; margin-bottom: 0.5rem; }&#xA;.book-card .badge { display: inline-block; font-size: 0.7rem; padding: 2px 8px; border-radius: 4px; letter-spacing: 1px; }&#xA;.badge-live { background: rgba(0,212,255,0.15); color: var(--accent); }&#xA;.badge-soon { background: rgba(136,136,160,0.15); color: var(--text-dim); }&#xA;.badge-nsfw { background: rgba(255,68,68,0.15); color: #ff4444; }&#xA;.book-card.greyed { opacity: 0.4; filter: grayscale(0.5); }&#xA;.book-card.greyed:hover { opacity: 0.6; }&#xA;.nsfw-gate { text-align: center; padding: 2rem; background: var(--surface); border: 1px solid rgba(255,68,68,0.2); border-radius: 12px; margin: 2rem 0; }&#xA;&lt;/style&gt;&#xA;&lt;p&gt;A real human voice. AI-delivered. Every audiobook produced on bare metal hardware. No studio. No middlemen. No robotic TTS.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Gratitude</title>
       <link>https://halo-ai.studio/gratitude/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -25,7 +25,7 @@ halo-aiは2つのコマンドでインストールできる。コンテナなし
 ## クイックスタート
 
 ```bash
-git clone https://github.com/halo-ai-official/halo-ai.git
+git clone https://github.com/stampby/halo-ai.git
 cd halo-ai
 ./install.sh
 ```
