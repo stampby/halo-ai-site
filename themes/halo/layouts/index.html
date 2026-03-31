@@ -1,6 +1,38 @@
 {{ define "main" }}
 <div class="hero">
-    <img src="/img/favicon.svg" class="logo" width="120" height="120" alt="halo-ai" style="filter: drop-shadow(0 0 30px rgba(0, 212, 255, 0.3)); margin-bottom: 2rem;">
+    <!-- Halo Orb — interactive, breathes, click to talk -->
+    <div id="haloOrb" class="halo-orb" onclick="openHaloChat()" title="Click to talk to Halo">
+        <svg viewBox="0 0 120 120" width="140" height="140">
+            <circle cx="60" cy="60" r="56" fill="none" stroke="rgba(0,212,255,0.12)" stroke-width="2"/>
+            <circle id="haloOrbRing" cx="60" cy="60" r="50" fill="none" stroke="#00d4ff" stroke-width="2.5" opacity="0.6"/>
+            <circle cx="60" cy="60" r="42" fill="rgba(0,212,255,0.04)"/>
+            <g id="haloOrbBars" transform="translate(60,60)">
+                <rect class="orb-bar" x="-1.5" y="-46" width="3" height="8" rx="1.5" fill="#00d4ff" opacity="0.2" transform="rotate(0)"/>
+                <rect class="orb-bar" x="-1.5" y="-46" width="3" height="8" rx="1.5" fill="#00d4ff" opacity="0.2" transform="rotate(30)"/>
+                <rect class="orb-bar" x="-1.5" y="-46" width="3" height="8" rx="1.5" fill="#00d4ff" opacity="0.2" transform="rotate(60)"/>
+                <rect class="orb-bar" x="-1.5" y="-46" width="3" height="8" rx="1.5" fill="#00d4ff" opacity="0.2" transform="rotate(90)"/>
+                <rect class="orb-bar" x="-1.5" y="-46" width="3" height="8" rx="1.5" fill="#00d4ff" opacity="0.2" transform="rotate(120)"/>
+                <rect class="orb-bar" x="-1.5" y="-46" width="3" height="8" rx="1.5" fill="#00d4ff" opacity="0.2" transform="rotate(150)"/>
+                <rect class="orb-bar" x="-1.5" y="-46" width="3" height="8" rx="1.5" fill="#00d4ff" opacity="0.2" transform="rotate(180)"/>
+                <rect class="orb-bar" x="-1.5" y="-46" width="3" height="8" rx="1.5" fill="#00d4ff" opacity="0.2" transform="rotate(210)"/>
+                <rect class="orb-bar" x="-1.5" y="-46" width="3" height="8" rx="1.5" fill="#00d4ff" opacity="0.2" transform="rotate(240)"/>
+                <rect class="orb-bar" x="-1.5" y="-46" width="3" height="8" rx="1.5" fill="#00d4ff" opacity="0.2" transform="rotate(270)"/>
+                <rect class="orb-bar" x="-1.5" y="-46" width="3" height="8" rx="1.5" fill="#00d4ff" opacity="0.2" transform="rotate(300)"/>
+                <rect class="orb-bar" x="-1.5" y="-46" width="3" height="8" rx="1.5" fill="#00d4ff" opacity="0.2" transform="rotate(330)"/>
+            </g>
+            <circle cx="60" cy="60" r="8" fill="#00d4ff" opacity="0.8"/>
+            <text x="60" y="95" text-anchor="middle" fill="#00d4ff" font-size="11" font-weight="700" font-family="system-ui" opacity="0.7">HALO</text>
+        </svg>
+        <div class="orb-label" id="orbLabel">click to speak</div>
+    </div>
+
+    <!-- Halo Chat Dialog -->
+    <div id="haloChatDialog" class="halo-chat-dialog">
+        <div class="halo-chat-user" id="haloChatUser"></div>
+        <div class="halo-chat-response" id="haloChatResponse"></div>
+        <div class="halo-chat-sig">— halo &middot; zero data retention</div>
+    </div>
+
     <h1>halo-<span>ai</span></h1>
     <p class="tagline">Local AI anywhere, for everyone. No cloud. No subscriptions. Just you and your hardware.</p>
     <div class="stats">

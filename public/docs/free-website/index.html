@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Host a Website for Free — The halo-ai Way | halo-ai — Local AI, Zero Cloud</title>
+<meta name="description" content="Complete guide to hosting a multilingual website with zero cost. Hugo &#43; Cloudflare Pages &#43; Namecheap. No hosting fees, no servers, no middlemen.">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+
+</head>
+<body>
+    <nav>
+    <a href="/" class="logo">halo-<span>ai</span></a>
+    <div class="links">
+        
+        
+        <a href="/">Home</a>
+        
+        
+        
+        <a href="/install/">Install</a>
+        
+        
+        
+        <a href="/docs/">Docs</a>
+        
+        
+        
+        <a href="/agents/">Agents</a>
+        
+        
+        
+        <a href="/benchmarks/">Benchmarks</a>
+        
+        
+        
+        <a href="/games/">Games</a>
+        
+        
+        
+        <a href="/voice/">Voice</a>
+        
+        
+        
+        <a href="/blog/">Blog</a>
+        
+        
+        
+        <span class="nav-disabled" title="Coming soon">Nexus</span>
+        
+        
+        
+        <a href="https://discord.gg/dSyV646eBs" target="_blank" rel="noopener">Discord</a>
+        
+        
+        
+        <a href="https://github.com/stampby/halo-ai" target="_blank" rel="noopener">GitHub</a>
+        
+        
+        <div class="lang-dropdown">
+            <span class="lang-trigger">English</span>
+            <div class="lang-menu">
+                
+                <a href="/en/" class="lang-option lang-active">English</a>
+                
+                <a href="/fr/" class="lang-option">Francais</a>
+                
+                <a href="/es/" class="lang-option">Espanol</a>
+                
+                <a href="/es-mx/" class="lang-option">Espanol (Mexico)</a>
+                
+                <a href="/pt-br/" class="lang-option">Portugues (Brasil)</a>
+                
+                <a href="/de/" class="lang-option">Deutsch</a>
+                
+                <a href="/ja/" class="lang-option">Japanese</a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <main>
+        
+<div class="container narrow content">
+    <h1>How to Host a Website for Free — The halo-ai Way</h1>
+    
+    <p>This entire website — halo-ai.studio — costs nothing to host. Zero. The only cost is the domain name (~$13-17/yr). Everything else is free.</p>
+<p>Here is exactly how we did it so you can replicate it in under 30 minutes.</p>
+<h2 id="what-you-get">What You Get</h2>
+<ul>
+<li>A fast, static website with unlimited pages</li>
+<li>Free SSL (HTTPS)</li>
+<li>Free global CDN (your site loads fast everywhere)</li>
+<li>Free DDoS protection</li>
+<li>Custom domain</li>
+<li>Multilingual support (we run 7 languages)</li>
+<li>Auto-deploy from GitHub — push code, site updates</li>
+<li>Zero hosting fees. Forever.</li>
+</ul>
+<h2 id="the-stack">The Stack</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Component</th>
+          <th>Purpose</th>
+          <th>Cost</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Hugo</td>
+          <td>Static site generator — builds HTML from markdown</td>
+          <td>Free (open source)</td>
+      </tr>
+      <tr>
+          <td>Cloudflare Pages</td>
+          <td>Hosting — serves your site from the edge</td>
+          <td>Free tier</td>
+      </tr>
+      <tr>
+          <td>Cloudflare DNS</td>
+          <td>Domain resolution + protection</td>
+          <td>Free tier</td>
+      </tr>
+      <tr>
+          <td>GitHub</td>
+          <td>Source code + auto-deploy trigger</td>
+          <td>Free tier</td>
+      </tr>
+      <tr>
+          <td>Namecheap</td>
+          <td>Domain registrar</td>
+          <td>~$13-17/yr</td>
+      </tr>
+  </tbody>
+</table>
+<p>Total annual cost: <strong>one domain name</strong>. That&rsquo;s it.</p>
+<h2 id="step-1-install-hugo">Step 1: Install Hugo</h2>
+<p>Hugo is the fastest static site generator. It builds hundreds of pages in milliseconds.</p>
+<p><strong>Arch Linux:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo pacman -S hugo
+</span></span></code></pre></div><p><strong>Ubuntu/Debian:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install hugo
+</span></span></code></pre></div><p><strong>macOS:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install hugo
+</span></span></code></pre></div><p><strong>From source (the halo-ai way):</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>go install github.com/gohugoio/hugo@latest
+</span></span></code></pre></div><p>Verify: <code>hugo version</code></p>
+<h2 id="step-2-create-your-site">Step 2: Create Your Site</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new site my-site
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">cd</span> my-site
+</span></span><span style="display:flex;"><span>git init
+</span></span></code></pre></div><p>Create a simple theme or use one from <a href="https://themes.gohugo.io">themes.gohugo.io</a>. We built ours from scratch — a single CSS file and a handful of HTML templates.</p>
+<h3 id="minimal-theme-structure">Minimal theme structure:</h3>
+<pre tabindex="0"><code>themes/my-theme/
+  layouts/
+    _default/
+      baseof.html    # base template
+      single.html    # single page
+      list.html      # list/index page
+    index.html       # home page
+    partials/
+      head.html      # &lt;head&gt; tag
+      nav.html       # navigation
+      footer.html    # footer
+  static/
+    css/style.css    # one CSS file
+</code></pre><h3 id="minimal-hugotoml">Minimal <code>hugo.toml</code>:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>baseURL = <span style="color:#f1fa8c">&#34;https://your-domain.com/&#34;</span>
+</span></span><span style="display:flex;"><span>title = <span style="color:#f1fa8c">&#34;My Site&#34;</span>
+</span></span><span style="display:flex;"><span>theme = <span style="color:#f1fa8c">&#34;my-theme&#34;</span>
+</span></span></code></pre></div><h3 id="add-content">Add content:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir content/about
+</span></span><span style="display:flex;"><span>cat &gt; content/about/_index.md <span style="color:#f1fa8c">&lt;&lt; &#39;EOF&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">---
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">title: &#34;About&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">---
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">Your content here in markdown.
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">EOF</span>
+</span></span></code></pre></div><h3 id="build-and-preview">Build and preview:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo server
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Open http://localhost:1313</span>
+</span></span></code></pre></div><h2 id="step-3-register-a-domain">Step 3: Register a Domain</h2>
+<p>Go to <a href="https://namecheap.com">Namecheap</a> and register your domain. Tips:</p>
+<ul>
+<li><code>.studio</code> domains are ~$13/yr</li>
+<li><code>.ca</code> domains are ~$16/yr (Canadian)</li>
+<li><code>.com</code> is classic but often taken</li>
+<li>Enable <strong>WHOIS privacy</strong> (free on Namecheap) to hide your personal info</li>
+<li>Skip all upsells — no hosting, no SSL, no premium DNS</li>
+</ul>
+<h2 id="step-4-set-up-cloudflare">Step 4: Set Up Cloudflare</h2>
+<ol>
+<li>Create a free account at <a href="https://cloudflare.com">cloudflare.com</a></li>
+<li>Click <strong>Add a Site</strong> and enter your domain</li>
+<li>Select the <strong>Free</strong> plan</li>
+<li>Cloudflare will give you two nameservers (e.g., <code>dale.ns.cloudflare.com</code>)</li>
+<li>Go back to Namecheap → your domain → <strong>Nameservers</strong> → switch to <strong>Custom DNS</strong></li>
+<li>Enter the two Cloudflare nameservers</li>
+<li>Save and wait for propagation (usually minutes, up to 24 hours)</li>
+</ol>
+<h3 id="add-dns-records">Add DNS records:</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Content</th>
+          <th>Proxy</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>A</td>
+          <td>@</td>
+          <td>192.0.2.1</td>
+          <td>Proxied (orange)</td>
+      </tr>
+      <tr>
+          <td>CNAME</td>
+          <td>www</td>
+          <td>your-domain.com</td>
+          <td>Proxied (orange)</td>
+      </tr>
+  </tbody>
+</table>
+<p>The <code>192.0.2.1</code> is a placeholder — Cloudflare Pages will override it.</p>
+<h2 id="step-5-deploy-to-cloudflare-pages">Step 5: Deploy to Cloudflare Pages</h2>
+<h3 id="option-a-wrangler-cli-what-we-use">Option A: Wrangler CLI (what we use)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#6272a4"># Install</span>
+</span></span><span style="display:flex;"><span>sudo npm install -g wrangler
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Create project</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">export</span> <span style="color:#8be9fd;font-style:italic">CLOUDFLARE_API_TOKEN</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;your-api-token&#34;</span>
+</span></span><span style="display:flex;"><span>wrangler pages project create my-site --production-branch main
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Build and deploy</span>
+</span></span><span style="display:flex;"><span>hugo
+</span></span><span style="display:flex;"><span>wrangler pages deploy public --project-name my-site
+</span></span></code></pre></div><p>Get your API token from Cloudflare → My Profile → API Tokens → Create Token → &ldquo;Edit Cloudflare Workers&rdquo; template.</p>
+<h3 id="option-b-github-auto-deploy">Option B: GitHub auto-deploy</h3>
+<ol>
+<li>Push your Hugo site to GitHub</li>
+<li>In Cloudflare → Workers &amp; Pages → Create → Pages → Connect to Git</li>
+<li>Select your repo</li>
+<li>Build command: <code>hugo</code></li>
+<li>Build output directory: <code>public</code></li>
+<li>Deploy</li>
+</ol>
+<p>Every <code>git push</code> automatically rebuilds and deploys your site.</p>
+<h3 id="connect-your-custom-domain">Connect your custom domain:</h3>
+<p>In Cloudflare → Workers &amp; Pages → your project → Custom Domains → Add <code>your-domain.com</code></p>
+<h2 id="step-6-add-ddns-optional--for-game-servers">Step 6: Add DDNS (Optional — for game servers)</h2>
+<p>If you want a subdomain pointing to your home IP (for game servers, VPN, etc.):</p>
+<ol>
+<li>
+<p>In Cloudflare DNS, add an A record:</p>
+<ul>
+<li>Name: <code>home</code></li>
+<li>Content: your WAN IP</li>
+<li>Proxy: <strong>DNS only</strong> (grey cloud — important for game servers)</li>
+</ul>
+</li>
+<li>
+<p>Set up auto-update on your router or server:</p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#6272a4"># Simple DDNS update script</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">ZONE_ID</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;your-zone-id&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">RECORD_ID</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;your-record-id&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">TOKEN</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;your-api-token&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">IP</span><span style="color:#ff79c6">=</span><span style="color:#ff79c6">$(</span>curl -s https://api.ipify.org<span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>curl -s -X PUT <span style="color:#f1fa8c">&#34;https://api.cloudflare.com/client/v4/zones/</span><span style="color:#8be9fd;font-style:italic">$ZONE_ID</span><span style="color:#f1fa8c">/dns_records/</span><span style="color:#8be9fd;font-style:italic">$RECORD_ID</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  -H <span style="color:#f1fa8c">&#34;Authorization: Bearer </span><span style="color:#8be9fd;font-style:italic">$TOKEN</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  -H <span style="color:#f1fa8c">&#34;Content-Type: application/json&#34;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  --data <span style="color:#f1fa8c">&#34;{\&#34;type\&#34;:\&#34;A\&#34;,\&#34;name\&#34;:\&#34;home\&#34;,\&#34;content\&#34;:\&#34;</span><span style="color:#8be9fd;font-style:italic">$IP</span><span style="color:#f1fa8c">\&#34;,\&#34;ttl\&#34;:1}&#34;</span>
+</span></span></code></pre></div><p>Run this on a cron every 5 minutes. Your <code>home.your-domain.com</code> always points to your current IP.</p>
+<h2 id="step-7-add-languages-optional">Step 7: Add Languages (Optional)</h2>
+<p>Hugo has built-in multilingual support. We serve 7 languages from the same site.</p>
+<p>In <code>hugo.toml</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>defaultContentLanguage = <span style="color:#f1fa8c">&#34;en&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[languages]
+</span></span><span style="display:flex;"><span>  [languages.en]
+</span></span><span style="display:flex;"><span>    languageName = <span style="color:#f1fa8c">&#34;English&#34;</span>
+</span></span><span style="display:flex;"><span>    contentDir = <span style="color:#f1fa8c">&#34;content&#34;</span>
+</span></span><span style="display:flex;"><span>  [languages.fr]
+</span></span><span style="display:flex;"><span>    languageName = <span style="color:#f1fa8c">&#34;Francais&#34;</span>
+</span></span><span style="display:flex;"><span>    contentDir = <span style="color:#f1fa8c">&#34;content.fr&#34;</span>
+</span></span><span style="display:flex;"><span>  [languages.es]
+</span></span><span style="display:flex;"><span>    languageName = <span style="color:#f1fa8c">&#34;Espanol&#34;</span>
+</span></span><span style="display:flex;"><span>    contentDir = <span style="color:#f1fa8c">&#34;content.es&#34;</span>
+</span></span></code></pre></div><p>Create translated content in <code>content.fr/</code>, <code>content.es/</code>, etc. Same filenames, translated text.</p>
+<h2 id="what-this-costs-vs-what-people-pay">What This Costs vs What People Pay</h2>
+<table>
+  <thead>
+      <tr>
+          <th>What people pay</th>
+          <th>What we pay</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Shared hosting: $5-15/mo</td>
+          <td>$0</td>
+      </tr>
+      <tr>
+          <td>SSL certificate: $50-100/yr</td>
+          <td>$0 (Cloudflare free)</td>
+      </tr>
+      <tr>
+          <td>CDN: $20-50/mo</td>
+          <td>$0 (Cloudflare free)</td>
+      </tr>
+      <tr>
+          <td>DDoS protection: $200+/mo</td>
+          <td>$0 (Cloudflare free)</td>
+      </tr>
+      <tr>
+          <td>Website builder: $12-40/mo</td>
+          <td>$0 (Hugo is free)</td>
+      </tr>
+      <tr>
+          <td>Domain: $10-15/yr</td>
+          <td>$13-17/yr</td>
+      </tr>
+      <tr>
+          <td><strong>Total/yr: $500-2000+</strong></td>
+          <td><strong>$13-17</strong></td>
+      </tr>
+  </tbody>
+</table>
+<p>That&rsquo;s not a typo.</p>
+<h2 id="the-halo-aistudio-numbers">The halo-ai.studio Numbers</h2>
+<ul>
+<li><strong>151 pages</strong> across 7 languages</li>
+<li><strong>50ms</strong> build time</li>
+<li><strong>Zero</strong> JavaScript frameworks</li>
+<li><strong>Zero</strong> hosting cost</li>
+<li><strong>Zero</strong> data retention</li>
+<li>Built in one session, deployed in seconds</li>
+</ul>
+<p>The website you are reading right now runs on this exact stack. No secrets. No proprietary tools. Everything listed here is what we use.</p>
+<p>Replicate it. Make it yours.</p>
+<p><em>Designed and built by the architect.</em></p>
+
+</div>
+
+    </main>
+    <footer>
+    <p><a href="/">halo-ai.studio</a> · <a href="https://github.com/stampby/halo-ai">GitHub</a> · <a href="https://discord.gg/dSyV646eBs">Discord</a> · <a href="https://halo-ai.ca">halo-ai.ca</a></p>
+    <p class="architect">Designed and built by the architect.</p>
+    <a href="/gratitude/" class="gratitude-link">.</a>
+</footer>
+
+    <script src="/js/halo.js"></script>
+</body>
+</html>

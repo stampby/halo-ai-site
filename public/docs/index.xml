@@ -6,6 +6,14 @@
     <description>Recent content in Documentation on halo-ai — Local AI, Zero Cloud</description>
     <generator>Hugo</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 31 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://halo-ai.studio/docs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Host a Website for Free — The halo-ai Way</title>
+      <link>https://halo-ai.studio/docs/free-website/</link>
+      <pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://halo-ai.studio/docs/free-website/</guid>
+      <description>&lt;p&gt;This entire website — halo-ai.studio — costs nothing to host. Zero. The only cost is the domain name (~$13-17/yr). Everything else is free.&lt;/p&gt;&#xA;&lt;p&gt;Here is exactly how we did it so you can replicate it in under 30 minutes.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-you-get&#34;&gt;What You Get&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A fast, static website with unlimited pages&lt;/li&gt;&#xA;&lt;li&gt;Free SSL (HTTPS)&lt;/li&gt;&#xA;&lt;li&gt;Free global CDN (your site loads fast everywhere)&lt;/li&gt;&#xA;&lt;li&gt;Free DDoS protection&lt;/li&gt;&#xA;&lt;li&gt;Custom domain&lt;/li&gt;&#xA;&lt;li&gt;Multilingual support (we run 7 languages)&lt;/li&gt;&#xA;&lt;li&gt;Auto-deploy from GitHub — push code, site updates&lt;/li&gt;&#xA;&lt;li&gt;Zero hosting fees. Forever.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;the-stack&#34;&gt;The Stack&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Component&lt;/th&gt;&#xA;          &lt;th&gt;Purpose&lt;/th&gt;&#xA;          &lt;th&gt;Cost&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Hugo&lt;/td&gt;&#xA;          &lt;td&gt;Static site generator — builds HTML from markdown&lt;/td&gt;&#xA;          &lt;td&gt;Free (open source)&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Cloudflare Pages&lt;/td&gt;&#xA;          &lt;td&gt;Hosting — serves your site from the edge&lt;/td&gt;&#xA;          &lt;td&gt;Free tier&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Cloudflare DNS&lt;/td&gt;&#xA;          &lt;td&gt;Domain resolution + protection&lt;/td&gt;&#xA;          &lt;td&gt;Free tier&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;GitHub&lt;/td&gt;&#xA;          &lt;td&gt;Source code + auto-deploy trigger&lt;/td&gt;&#xA;          &lt;td&gt;Free tier&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Namecheap&lt;/td&gt;&#xA;          &lt;td&gt;Domain registrar&lt;/td&gt;&#xA;          &lt;td&gt;~$13-17/yr&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;Total annual cost: &lt;strong&gt;one domain name&lt;/strong&gt;. That&amp;rsquo;s it.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
