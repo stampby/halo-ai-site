@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instalação | halo-ai — IA local, zero nuvem</title>
+<meta name="description" content="Coloque o halo-ai pra rodar no seu hardware em minutos. Arch Linux, CachyOS, Ubuntu, Fedora.">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+
+</head>
+<body>
+    <nav>
+    <a href="/" class="logo">halo-<span>ai</span></a>
+    <div class="links">
+        
+        
+        <a href="/">Home</a>
+        
+        
+        
+        <a href="/install/">Install</a>
+        
+        
+        
+        <a href="/docs/">Docs</a>
+        
+        
+        
+        <a href="/agents/">Agents</a>
+        
+        
+        
+        <a href="/benchmarks/">Benchmarks</a>
+        
+        
+        
+        <a href="/games/">Games</a>
+        
+        
+        
+        <a href="/voice/">Voice</a>
+        
+        
+        
+        <a href="/blog/">Blog</a>
+        
+        
+        
+        <span class="nav-disabled" title="Coming soon">Nexus</span>
+        
+        
+        
+        <a href="https://discord.gg/dSyV646eBs" target="_blank" rel="noopener">Discord</a>
+        
+        
+        
+        <a href="https://github.com/stampby/halo-ai" target="_blank" rel="noopener">GitHub</a>
+        
+        
+        <span class="lang-picker">
+            
+            <a href="/en/" class="lang-link">English</a>
+            
+            <a href="/fr/" class="lang-link">Francais</a>
+            
+            <a href="/es/" class="lang-link">Espanol</a>
+            
+            <a href="/es-mx/" class="lang-link">Espanol (Mexico)</a>
+            
+            <a href="/pt-br/" class="lang-link lang-active">Portugues (Brasil)</a>
+            
+            <a href="/de/" class="lang-link">Deutsch</a>
+            
+            <a href="/ja/" class="lang-link">Japanese</a>
+            
+        </span>
+    </div>
+</nav>
+
+    <main>
+        
+<div class="container narrow content">
+    <h1>Instalação</h1>
+    
+    <p>O halo-ai instala com dois comandos. Sem containers, sem dependências de nuvem, sem telemetria. Tudo roda na sua máquina.</p>
+<h2 id="requisitos">Requisitos</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Componente</th>
+          <th>Mínimo</th>
+          <th>Recomendado</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>RAM</td>
+          <td>16 GB</td>
+          <td>64 GB+</td>
+      </tr>
+      <tr>
+          <td>GPU</td>
+          <td>AMD ou NVIDIA (compatível com Vulkan)</td>
+          <td>AMD Radeon 8060S ou superior</td>
+      </tr>
+      <tr>
+          <td>Armazenamento</td>
+          <td>20 GB livres</td>
+          <td>50 GB+ (modelos vão usar espaço)</td>
+      </tr>
+      <tr>
+          <td>SO</td>
+          <td>Linux (systemd)</td>
+          <td>Arch Linux / CachyOS</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="distribuições-suportadas">Distribuições Suportadas</h2>
+<ul>
+<li><strong>Arch Linux</strong> &ndash; suporte de primeira classe, testado diariamente</li>
+<li><strong>CachyOS</strong> &ndash; baseado no Arch, otimizado para performance, totalmente compatível</li>
+<li><strong>Ubuntu 22.04+</strong> &ndash; suportado</li>
+<li><strong>Fedora 39+</strong> &ndash; suportado</li>
+</ul>
+<h2 id="início-rápido">Início Rápido</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/halo-ai-official/halo-ai.git
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">cd</span> halo-ai
+</span></span><span style="display:flex;"><span>./install.sh
+</span></span></code></pre></div><p>O instalador detecta seu hardware, configura aceleração de GPU, baixa os modelos e levanta todos os 33 serviços. Em hardware AMD Strix Halo, a implantação completa leva menos de dez minutos.</p>
+<h2 id="o-que-é-instalado">O Que é Instalado</h2>
+<p>O halo-ai implanta 33 serviços interconectados cobrindo inferência, síntese de voz, reconhecimento de fala, geração de imagens, análise de código, monitoramento de segurança e coordenação autônoma de agentes. Cada serviço é gerenciado pelo systemd e pode ser iniciado, parado ou inspecionado individualmente.</p>
+<h2 id="otimização-para-amd-strix-halo">Otimização para AMD Strix Halo</h2>
+<p>O instalador aplica ajustes específicos para sistemas Strix Halo automaticamente. Isso inclui seleção do backend Vulkan, habilitação de Flash Attention, estratégias de alocação de memória para LPDDR5x e perfis de curva de ventilação. Se você está rodando em uma máquina Strix Halo, o halo-ai vai encontrá-la e usar cada watt.</p>
+<h2 id="pós-instalação">Pós-Instalação</h2>
+<p>Após a instalação, abra seu navegador e acesse sua instância local do halo-ai. O painel Man Cave vai estar esperando.</p>
+<p>Para solução de problemas, detalhes de arquitetura e documentação de serviços, veja o hub de <a href="/pt-br/docs/">Documentação</a>.</p>
+<p><em>Projetado e construido pelo arquiteto.</em></p>
+
+    
+</div>
+
+    </main>
+    <footer>
+    <p><a href="/">halo-ai.studio</a> · <a href="https://github.com/stampby/halo-ai">GitHub</a> · <a href="https://discord.gg/dSyV646eBs">Discord</a> · <a href="https://halo-ai.ca">halo-ai.ca</a></p>
+    <p class="architect">Designed and built by the architect.</p>
+    <a href="/gratitude/" class="gratitude-link">.</a>
+</footer>
+
+</body>
+</html>

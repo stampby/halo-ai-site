@@ -2,7 +2,16 @@
     <a href="/" class="logo">halo-<span>ai</span></a>
     <div class="links">
         {{ range .Site.Menus.main }}
-        <a href="{{ .URL }}">{{ .Name }}</a>
+        {{ if .Params.disabled }}
+        <span class="nav-disabled" title="Coming soon">{{ .Name }}</span>
+        {{ else }}
+        <a href="{{ .URL }}"{{ if strings.HasPrefix .URL "http" }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}</a>
         {{ end }}
+        {{ end }}
+        <span class="lang-picker">
+            {{ range .Site.Languages }}
+            <a href="/{{ .Lang }}/" class="lang-link{{ if eq $.Language.Lang .Lang }} lang-active{{ end }}">{{ .LanguageName }}</a>
+            {{ end }}
+        </span>
     </div>
 </nav>

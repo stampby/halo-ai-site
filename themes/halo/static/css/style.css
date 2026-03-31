@@ -45,6 +45,12 @@ nav .logo span { color: var(--accent); }
 nav .links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
 nav .links a { color: var(--text-dim); font-size: 0.9rem; }
 nav .links a:hover { color: var(--accent); text-decoration: none; }
+nav .nav-disabled { color: #444455; font-size: 0.9rem; cursor: default; position: relative; }
+.lang-picker { display: flex; gap: 0.5rem; margin-left: 1rem; padding-left: 1rem; border-left: 1px solid var(--border); }
+.lang-link { font-size: 0.75rem; color: #444455; }
+.lang-link:hover { color: var(--accent); text-decoration: none; }
+.lang-active { color: var(--accent); }
+nav .nav-disabled::after { content: "soon"; font-size: 0.6rem; color: var(--accent); position: absolute; top: -8px; right: -20px; opacity: 0.6; }
 
 /* Container */
 .container { max-width: 1100px; margin: 0 auto; padding: 6rem 2rem 4rem; }
@@ -154,6 +160,8 @@ footer {
     color: var(--text-dim); font-size: 0.9rem;
 }
 .architect { margin-top: 0.5rem; font-style: italic; }
+.gratitude-link { position: fixed; bottom: 12px; right: 12px; color: #1a1a2e; font-size: 1.5rem; text-decoration: none; opacity: 0.3; transition: opacity 0.3s; line-height: 1; }
+.gratitude-link:hover { opacity: 1; color: var(--gold); text-decoration: none; }
 
 /* Responsive */
 @media (max-width: 768px) {

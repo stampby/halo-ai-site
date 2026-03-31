@@ -1,13 +1,57 @@
 baseURL = "https://halo-ai.studio/"
-languageCode = "en-us"
-title = "halo-ai — Local AI, Zero Cloud"
+title = "halo-ai"
 theme = "halo"
+defaultContentLanguage = "en"
 
 [params]
   description = "Local AI anywhere, for everyone. Zero cloud, zero subscriptions."
   github = "https://github.com/stampby/halo-ai"
   discord = "https://discord.gg/dSyV646eBs"
-  tagline = "86 tok/s. 17 agents. Zero cloud."
+  tagline = "86 tok/s. 27 agents. Zero cloud."
+
+[languages]
+  [languages.en]
+    languageCode = "en-us"
+    languageName = "English"
+    title = "halo-ai — Local AI, Zero Cloud"
+    weight = 1
+    contentDir = "content"
+  [languages.fr]
+    languageCode = "fr"
+    languageName = "Francais"
+    title = "halo-ai — IA locale, zero cloud"
+    weight = 2
+    contentDir = "content.fr"
+  [languages.es]
+    languageCode = "es"
+    languageName = "Espanol"
+    title = "halo-ai — IA local, cero nube"
+    weight = 3
+    contentDir = "content.es"
+  [languages.es-mx]
+    languageCode = "es-mx"
+    languageName = "Espanol (Mexico)"
+    title = "halo-ai — IA local, cero nube"
+    weight = 4
+    contentDir = "content.es-mx"
+  [languages.pt-br]
+    languageCode = "pt-br"
+    languageName = "Portugues (Brasil)"
+    title = "halo-ai — IA local, zero nuvem"
+    weight = 5
+    contentDir = "content.pt-br"
+  [languages.de]
+    languageCode = "de"
+    languageName = "Deutsch"
+    title = "halo-ai — Lokale KI, keine Cloud"
+    weight = 6
+    contentDir = "content.de"
+  [languages.ja]
+    languageCode = "ja"
+    languageName = "Japanese"
+    title = "halo-ai — Local AI, Zero Cloud"
+    weight = 7
+    contentDir = "content.ja"
 
 [markup]
   [markup.highlight]
@@ -49,9 +93,15 @@ theme = "halo"
     url = "/blog/"
     weight = 8
   [[menu.main]]
+    name = "Nexus"
+    url = "#"
+    weight = 9
+    [menu.main.params]
+      disabled = true
+  [[menu.main]]
     name = "Discord"
     url = "https://discord.gg/dSyV646eBs"
-    weight = 9
+    weight = 10
   [[menu.main]]
     name = "GitHub"
     url = "https://github.com/stampby/halo-ai"

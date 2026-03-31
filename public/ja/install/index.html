@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>インストール | halo-ai — Local AI, Zero Cloud</title>
+<meta name="description" content="halo-aiを数分であなたのハードウェアで動かそう。Arch Linux、CachyOS、Ubuntu、Fedora対応。">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+
+</head>
+<body>
+    <nav>
+    <a href="/" class="logo">halo-<span>ai</span></a>
+    <div class="links">
+        
+        
+        <a href="/">Home</a>
+        
+        
+        
+        <a href="/install/">Install</a>
+        
+        
+        
+        <a href="/docs/">Docs</a>
+        
+        
+        
+        <a href="/agents/">Agents</a>
+        
+        
+        
+        <a href="/benchmarks/">Benchmarks</a>
+        
+        
+        
+        <a href="/games/">Games</a>
+        
+        
+        
+        <a href="/voice/">Voice</a>
+        
+        
+        
+        <a href="/blog/">Blog</a>
+        
+        
+        
+        <span class="nav-disabled" title="Coming soon">Nexus</span>
+        
+        
+        
+        <a href="https://discord.gg/dSyV646eBs" target="_blank" rel="noopener">Discord</a>
+        
+        
+        
+        <a href="https://github.com/stampby/halo-ai" target="_blank" rel="noopener">GitHub</a>
+        
+        
+        <span class="lang-picker">
+            
+            <a href="/en/" class="lang-link">English</a>
+            
+            <a href="/fr/" class="lang-link">Francais</a>
+            
+            <a href="/es/" class="lang-link">Espanol</a>
+            
+            <a href="/es-mx/" class="lang-link">Espanol (Mexico)</a>
+            
+            <a href="/pt-br/" class="lang-link">Portugues (Brasil)</a>
+            
+            <a href="/de/" class="lang-link">Deutsch</a>
+            
+            <a href="/ja/" class="lang-link lang-active">Japanese</a>
+            
+        </span>
+    </div>
+</nav>
+
+    <main>
+        
+<div class="container narrow content">
+    <h1>インストール</h1>
+    
+    <p>halo-aiは2つのコマンドでインストールできる。コンテナなし、クラウド依存なし、テレメトリなし。すべてあなたのマシンで動く。</p>
+<h2 id="要件">要件</h2>
+<table>
+  <thead>
+      <tr>
+          <th>コンポーネント</th>
+          <th>最低</th>
+          <th>推奨</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>RAM</td>
+          <td>16 GB</td>
+          <td>64 GB+</td>
+      </tr>
+      <tr>
+          <td>GPU</td>
+          <td>AMDまたはNVIDIA（Vulkan対応）</td>
+          <td>AMD Radeon 8060S以上</td>
+      </tr>
+      <tr>
+          <td>ストレージ</td>
+          <td>20 GB空き</td>
+          <td>50 GB+（モデルが容量を使用）</td>
+      </tr>
+      <tr>
+          <td>OS</td>
+          <td>Linux (systemd)</td>
+          <td>Arch Linux / CachyOS</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="対応ディストリビューション">対応ディストリビューション</h2>
+<ul>
+<li><strong>Arch Linux</strong> &ndash; ファーストクラスサポート、毎日テスト済み</li>
+<li><strong>CachyOS</strong> &ndash; Archベース、パフォーマンスチューニング済み、完全互換</li>
+<li><strong>Ubuntu 22.04+</strong> &ndash; サポート対象</li>
+<li><strong>Fedora 39+</strong> &ndash; サポート対象</li>
+</ul>
+<h2 id="クイックスタート">クイックスタート</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/halo-ai-official/halo-ai.git
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">cd</span> halo-ai
+</span></span><span style="display:flex;"><span>./install.sh
+</span></span></code></pre></div><p>インストーラーがハードウェアを検出し、GPUアクセラレーションを設定し、モデルをダウンロードし、33のサービスすべてを起動する。AMD Strix Haloハードウェアなら、完全なデプロイは10分以内に完了する。</p>
+<h2 id="インストールされるもの">インストールされるもの</h2>
+<p>halo-aiは推論、音声合成、音声認識、画像生成、コード分析、セキュリティ監視、自律エージェント連携をカバーする33の相互接続サービスをデプロイする。各サービスはsystemdで管理され、個別に起動・停止・検査が可能。</p>
+<h2 id="amd-strix-halo最適化">AMD Strix Halo最適化</h2>
+<p>インストーラーはStrix Haloシステム向けのハードウェア固有のチューニングを自動的に適用する。Vulkanバックエンドの選択、Flash Attentionの有効化、LPDDR5x向けメモリ割り当て戦略、ファンカーブプロファイルが含まれる。Strix Haloマシンで動かすなら、halo-aiはそれを見つけ、すべてのワットを使い切る。</p>
+<h2 id="インストール後">インストール後</h2>
+<p>インストール完了後、ブラウザを開いてローカルのhalo-aiインスタンスにアクセスしよう。Man Caveダッシュボードが待っている。</p>
+<p>トラブルシューティング、アーキテクチャの詳細、サービスドキュメントについては<a href="/ja/docs/">ドキュメント</a>ハブを参照。</p>
+<p><em>アーキテクトによって設計・構築。</em></p>
+
+    
+</div>
+
+    </main>
+    <footer>
+    <p><a href="/">halo-ai.studio</a> · <a href="https://github.com/stampby/halo-ai">GitHub</a> · <a href="https://discord.gg/dSyV646eBs">Discord</a> · <a href="https://halo-ai.ca">halo-ai.ca</a></p>
+    <p class="architect">Designed and built by the architect.</p>
+    <a href="/gratitude/" class="gratitude-link">.</a>
+</footer>
+
+</body>
+</html>

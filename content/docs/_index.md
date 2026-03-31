@@ -3,7 +3,6 @@ title: "Documentation"
 description: "Technical documentation for the halo-ai platform. Architecture, services, security, and operational guides."
 ---
 
-# Documentation
 
 Everything you need to understand, operate, and extend halo-ai.
 

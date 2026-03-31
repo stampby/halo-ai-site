@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ドキュメント | halo-ai — Local AI, Zero Cloud</title>
+<meta name="description" content="halo-aiプラットフォームの技術ドキュメント。アーキテクチャ、サービス、セキュリティ、運用ガイド。">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+
+</head>
+<body>
+    <nav>
+    <a href="/" class="logo">halo-<span>ai</span></a>
+    <div class="links">
+        
+        
+        <a href="/">Home</a>
+        
+        
+        
+        <a href="/install/">Install</a>
+        
+        
+        
+        <a href="/docs/">Docs</a>
+        
+        
+        
+        <a href="/agents/">Agents</a>
+        
+        
+        
+        <a href="/benchmarks/">Benchmarks</a>
+        
+        
+        
+        <a href="/games/">Games</a>
+        
+        
+        
+        <a href="/voice/">Voice</a>
+        
+        
+        
+        <a href="/blog/">Blog</a>
+        
+        
+        
+        <span class="nav-disabled" title="Coming soon">Nexus</span>
+        
+        
+        
+        <a href="https://discord.gg/dSyV646eBs" target="_blank" rel="noopener">Discord</a>
+        
+        
+        
+        <a href="https://github.com/stampby/halo-ai" target="_blank" rel="noopener">GitHub</a>
+        
+        
+        <span class="lang-picker">
+            
+            <a href="/en/" class="lang-link">English</a>
+            
+            <a href="/fr/" class="lang-link">Francais</a>
+            
+            <a href="/es/" class="lang-link">Espanol</a>
+            
+            <a href="/es-mx/" class="lang-link">Espanol (Mexico)</a>
+            
+            <a href="/pt-br/" class="lang-link">Portugues (Brasil)</a>
+            
+            <a href="/de/" class="lang-link">Deutsch</a>
+            
+            <a href="/ja/" class="lang-link lang-active">Japanese</a>
+            
+        </span>
+    </div>
+</nav>
+
+    <main>
+        
+<div class="container narrow content">
+    <h1>ドキュメント</h1>
+    
+    <p>halo-aiを理解し、運用し、拡張するために必要なすべて。</p>
+<h2 id="コアドキュメント">コアドキュメント</h2>
+<h3 id="アーキテクチャ">アーキテクチャ</h3>
+<p>システムアーキテクチャの全体像：33のサービス、17のエージェント、サービス間通信、ハードウェア抽象化レイヤー。各パーツがどう組み合わさるか、そしてその理由。
+<a href="https://github.com/halo-ai-official/halo-ai/blob/main/docs/ARCHITECTURE.md">アーキテクチャドキュメントを読む</a></p>
+<h3 id="サービス">サービス</h3>
+<p>各サービスの個別ドキュメント。設定、依存関係、ポート、ヘルスチェックなど、スタック内のすべてのコンポーネントを網羅。
+<a href="https://github.com/halo-ai-official/halo-ai/blob/main/docs/SERVICES.md">サービスドキュメントを読む</a></p>
+<h3 id="セキュリティ">セキュリティ</h3>
+<p>脅威モデル、ネットワーク分離、認証、そして「あなたが指示しない限り何もハードウェアから外に出ない」という原則。
+<a href="https://github.com/halo-ai-official/halo-ai/blob/main/docs/SECURITY.md">セキュリティドキュメントを読む</a></p>
+<h3 id="トラブルシューティング">トラブルシューティング</h3>
+<p>よくある問題、診断コマンド、ログの場所、復旧手順。何か壊れたらまずここから。
+<a href="https://github.com/halo-ai-official/halo-ai/blob/main/docs/TROUBLESHOOTING.md">トラブルシューティングドキュメントを読む</a></p>
+<h2 id="上級トピック">上級トピック</h2>
+<h3 id="vpn">VPN</h3>
+<p>halo-aiインスタンスへの安全なリモートアクセス。ポートを公開せずにマシン間でメッシュネットワーク。
+<a href="https://github.com/halo-ai-official/halo-ai/blob/main/docs/VPN.md">VPNドキュメントを読む</a></p>
+<h3 id="スタック保護">スタック保護</h3>
+<p>サービスウォッチドッグ、自動再起動ポリシー、ヘルス監視、そして問題が発生したときにhalo-aiを稼働させ続けるメカニズム。
+<a href="https://github.com/halo-ai-official/halo-ai/blob/main/docs/STACK_PROTECTION.md">スタック保護ドキュメントを読む</a></p>
+<h3 id="blueprints">Blueprints</h3>
+<p>halo-aiに新機能を追加するための宣言的サービス定義。Blueprintを書いて配置すれば、システムが残りを処理する。
+<a href="https://github.com/halo-ai-official/halo-ai/blob/main/docs/BLUEPRINTS.md">Blueprintsドキュメントを読む</a></p>
+<h3 id="自律パイプライン">自律パイプライン</h3>
+<p>halo-aiエージェントが人間の介入なしにどう連携するか。タスク分解、エージェント選択、実行、品質ゲート。
+<a href="https://github.com/halo-ai-official/halo-ai/blob/main/docs/AUTONOMOUS_PIPELINE.md">自律パイプラインドキュメントを読む</a></p>
+<p><em>アーキテクトによって設計・構築。</em></p>
+
+    
+</div>
+
+    </main>
+    <footer>
+    <p><a href="/">halo-ai.studio</a> · <a href="https://github.com/stampby/halo-ai">GitHub</a> · <a href="https://discord.gg/dSyV646eBs">Discord</a> · <a href="https://halo-ai.ca">halo-ai.ca</a></p>
+    <p class="architect">Designed and built by the architect.</p>
+    <a href="/gratitude/" class="gratitude-link">.</a>
+</footer>
+
+</body>
+</html>

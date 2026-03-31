@@ -3,7 +3,6 @@ title: "Voice Platform"
 description: "Clone any voice with 30 seconds of audio. Text-to-speech, speech-to-text, and Voice-as-a-Service. Everything stays local."
 ---
 
-# Voice Platform
 
 Your voice. Your hardware. Nobody else's business.
 

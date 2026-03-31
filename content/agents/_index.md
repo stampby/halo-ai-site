@@ -3,7 +3,6 @@ title: "Meet the Family"
 description: "The 17 autonomous agents that power halo-ai. Each with a role, a personality, and a reason for being here."
 ---
 
-# Meet the Family
 
 halo-ai is not one AI. It is seventeen. Each agent has a specialty, a personality, and a history. They coordinate, argue, and deliver. Here they are.
 

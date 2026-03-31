@@ -3,7 +3,6 @@ title: "halo-ai Studios"
 description: "halo-ai Studios presents The Halos. Voxel games built by AI agents, powered by local hardware."
 ---
 
-# halo-ai Studios Presents: The Halos
 
 Games built by machines, played by humans.
 

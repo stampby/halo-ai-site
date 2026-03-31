@@ -3,7 +3,6 @@ title: "Installation"
 description: "Get halo-ai running on your hardware in minutes. Arch Linux, CachyOS, Ubuntu, Fedora."
 ---
 
-# Installation
 
 halo-ai installs with two commands. No containers, no cloud dependencies, no telemetry. Everything runs on your machine.
 

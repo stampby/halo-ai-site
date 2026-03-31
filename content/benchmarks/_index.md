@@ -3,7 +3,6 @@ title: "Benchmarks"
 description: "Real performance numbers from halo-ai running on AMD Strix Halo hardware. No synthetic loads, no cherry-picking."
 ---
 
-# Benchmarks
 
 These numbers come from production workloads on real hardware. Nothing synthetic, nothing cherry-picked.
 
