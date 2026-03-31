@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ベンチマーク | halo-ai — Local AI, Zero Cloud</title>
+<meta name="description" content="AMD Strix Haloハードウェアで動作するhalo-aiの実パフォーマンス数値。合成負荷なし、いいとこ取りなし。">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+
+</head>
+<body>
+    <nav>
+    <a href="/" class="logo">halo-<span>ai</span></a>
+    <div class="links">
+        
+        
+        <a href="/">Home</a>
+        
+        
+        
+        <a href="/install/">Install</a>
+        
+        
+        
+        <a href="/docs/">Docs</a>
+        
+        
+        
+        <a href="/agents/">Agents</a>
+        
+        
+        
+        <a href="/benchmarks/">Benchmarks</a>
+        
+        
+        
+        <a href="/games/">Games</a>
+        
+        
+        
+        <a href="/voice/">Voice</a>
+        
+        
+        
+        <a href="/blog/">Blog</a>
+        
+        
+        
+        <span class="nav-disabled" title="Coming soon">Nexus</span>
+        
+        
+        
+        <a href="https://discord.gg/dSyV646eBs" target="_blank" rel="noopener">Discord</a>
+        
+        
+        
+        <a href="https://github.com/stampby/halo-ai" target="_blank" rel="noopener">GitHub</a>
+        
+        
+        <span class="lang-picker">
+            
+            <a href="/en/" class="lang-link">English</a>
+            
+            <a href="/fr/" class="lang-link">Francais</a>
+            
+            <a href="/es/" class="lang-link">Espanol</a>
+            
+            <a href="/es-mx/" class="lang-link">Espanol (Mexico)</a>
+            
+            <a href="/pt-br/" class="lang-link">Portugues (Brasil)</a>
+            
+            <a href="/de/" class="lang-link">Deutsch</a>
+            
+            <a href="/ja/" class="lang-link lang-active">Japanese</a>
+            
+        </span>
+    </div>
+</nav>
+
+    <main>
+        
+<div class="container narrow content">
+    <h1>ベンチマーク</h1>
+    
+    <p>これらの数値は実際のハードウェア上のプロダクションワークロードから得たもの。合成なし、いいとこ取りなし。</p>
+<h2 id="ハードウェア">ハードウェア</h2>
+<table>
+  <thead>
+      <tr>
+          <th>コンポーネント</th>
+          <th>仕様</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CPU</td>
+          <td>AMD Ryzen AI MAX+ 395</td>
+      </tr>
+      <tr>
+          <td>メモリ</td>
+          <td>128 GB LPDDR5x-8000</td>
+      </tr>
+      <tr>
+          <td>GPU</td>
+          <td>AMD Radeon 8060S (gfx1151)</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="モデル">モデル</h2>
+<p><strong>Qwen3-30B-A3B</strong> &ndash; Mixture of Experts アーキテクチャ。300億パラメータ、トークンあたり30億がアクティブ。ローカルハードウェアにおける性能と速度の最適なバランス。</p>
+<h2 id="vulkan--flash-attention">Vulkan + Flash Attention</h2>
+<p>メインバックエンド。Flash Attention有効のVulkanがStrix Haloで最高のスループットを実現。</p>
+<table>
+  <thead>
+      <tr>
+          <th>指標</th>
+          <th>値</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>生成速度</td>
+          <td>86 tok/s</td>
+      </tr>
+      <tr>
+          <td>プロンプト処理</td>
+          <td>178 &ndash; 444 tok/s</td>
+      </tr>
+      <tr>
+          <td>最初のトークンまでの時間</td>
+          <td>&lt; 110 ms</td>
+      </tr>
+      <tr>
+          <td>GPU使用率</td>
+          <td>97%</td>
+      </tr>
+      <tr>
+          <td>GPU温度</td>
+          <td>55 C</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="hip--rocm">HIP / ROCm</h2>
+<p>ROCm互換性が必要なワークロード向けの代替バックエンド。</p>
+<table>
+  <thead>
+      <tr>
+          <th>指標</th>
+          <th>値</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>生成速度</td>
+          <td>70 tok/s</td>
+      </tr>
+      <tr>
+          <td>プロンプト処理</td>
+          <td>217 &ndash; 302 tok/s</td>
+      </tr>
+      <tr>
+          <td>最初のトークンまでの時間</td>
+          <td>&lt; 110 ms</td>
+      </tr>
+      <tr>
+          <td>GPU使用率</td>
+          <td>97%</td>
+      </tr>
+      <tr>
+          <td>GPU温度</td>
+          <td>55 C</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="まとめ">まとめ</h2>
+<p>Vulkan + Flash AttentionがStrix Haloシステムの推奨バックエンド。86 tok/sの生成速度は、知覚できる遅延なしのリアルタイム会話AIを意味する。プロンプト処理は444 tok/sのピークに達し、一般的なワークロードではコンテキスト取り込みがほぼ瞬時に行われる。</p>
+<p>最初のトークンまでの時間は両バックエンドで110ミリ秒以下を維持。GPUは97%の使用率と55度で安定――フル負荷でも熱的に快適。</p>
+<p>すべての推論はローカルで実行。あなたのハードウェアから何も外に出ない。</p>
+<p><em>アーキテクトによって設計・構築。</em></p>
+
+    
+</div>
+
+    </main>
+    <footer>
+    <p><a href="/">halo-ai.studio</a> · <a href="https://github.com/stampby/halo-ai">GitHub</a> · <a href="https://discord.gg/dSyV646eBs">Discord</a> · <a href="https://halo-ai.ca">halo-ai.ca</a></p>
+    <p class="architect">Designed and built by the architect.</p>
+    <a href="/gratitude/" class="gratitude-link">.</a>
+</footer>
+
+</body>
+</html>

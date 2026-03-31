@@ -39,6 +39,43 @@
                 href="https://halo-ai.studio/ja/categories/"
                 />
   </url><url>
+    <loc>https://halo-ai.studio/ja/blog/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://halo-ai.studio/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://halo-ai.studio/fr/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://halo-ai.studio/es/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-mx"
+                href="https://halo-ai.studio/es-mx/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://halo-ai.studio/pt-br/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://halo-ai.studio/de/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://halo-ai.studio/ja/blog/"
+                />
+  </url><url>
     <loc>https://halo-ai.studio/ja/</loc>
     <xhtml:link
                 rel="alternate"
@@ -74,6 +111,43 @@
                 rel="alternate"
                 hreflang="ja"
                 href="https://halo-ai.studio/ja/"
+                />
+  </url><url>
+    <loc>https://halo-ai.studio/ja/games/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://halo-ai.studio/games/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://halo-ai.studio/fr/games/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://halo-ai.studio/es/games/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-mx"
+                href="https://halo-ai.studio/es-mx/games/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://halo-ai.studio/pt-br/games/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://halo-ai.studio/de/games/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://halo-ai.studio/ja/games/"
                 />
   </url><url>
     <loc>https://halo-ai.studio/ja/tags/</loc>
@@ -185,6 +259,117 @@
                 rel="alternate"
                 hreflang="ja"
                 href="https://halo-ai.studio/ja/docs/"
+                />
+  </url><url>
+    <loc>https://halo-ai.studio/ja/agents/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://halo-ai.studio/agents/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://halo-ai.studio/fr/agents/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://halo-ai.studio/es/agents/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-mx"
+                href="https://halo-ai.studio/es-mx/agents/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://halo-ai.studio/pt-br/agents/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://halo-ai.studio/de/agents/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://halo-ai.studio/ja/agents/"
+                />
+  </url><url>
+    <loc>https://halo-ai.studio/ja/benchmarks/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://halo-ai.studio/benchmarks/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://halo-ai.studio/fr/benchmarks/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://halo-ai.studio/es/benchmarks/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-mx"
+                href="https://halo-ai.studio/es-mx/benchmarks/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://halo-ai.studio/pt-br/benchmarks/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://halo-ai.studio/de/benchmarks/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://halo-ai.studio/ja/benchmarks/"
+                />
+  </url><url>
+    <loc>https://halo-ai.studio/ja/voice/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://halo-ai.studio/voice/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://halo-ai.studio/fr/voice/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://halo-ai.studio/es/voice/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-mx"
+                href="https://halo-ai.studio/es-mx/voice/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://halo-ai.studio/pt-br/voice/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://halo-ai.studio/de/voice/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://halo-ai.studio/ja/voice/"
                 />
   </url>
 </urlset>

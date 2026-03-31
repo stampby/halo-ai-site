@@ -30,6 +30,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://halo-ai.studio/ja/benchmarks/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="es"
                 href="https://halo-ai.studio/es/benchmarks/"
                 />
@@ -96,6 +101,11 @@
                 rel="alternate"
                 hreflang="de"
                 href="https://halo-ai.studio/de/agents/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://halo-ai.studio/ja/agents/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -168,6 +178,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://halo-ai.studio/ja/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="es"
                 href="https://halo-ai.studio/es/blog/"
                 />
@@ -237,6 +252,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="ja"
+                href="https://halo-ai.studio/ja/games/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="es"
                 href="https://halo-ai.studio/es/games/"
                 />
@@ -303,6 +323,11 @@
                 rel="alternate"
                 hreflang="de"
                 href="https://halo-ai.studio/de/voice/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://halo-ai.studio/ja/voice/"
                 />
     <xhtml:link
                 rel="alternate"
