@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Installation | halo-ai — Local AI, Zero Cloud</title>
+<meta name="description" content="Get halo-ai running on your hardware in minutes. Arch Linux, CachyOS, Ubuntu, Fedora.">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+
+</head>
+<body>
+    <nav>
+    <a href="/" class="logo">halo-<span>ai</span></a>
+    <div class="links">
+        
+        <a href="/">Home</a>
+        
+        <a href="/install/">Install</a>
+        
+        <a href="/docs/">Docs</a>
+        
+        <a href="/agents/">Agents</a>
+        
+        <a href="/benchmarks/">Benchmarks</a>
+        
+        <a href="/games/">Games</a>
+        
+        <a href="/voice/">Voice</a>
+        
+        <a href="/blog/">Blog</a>
+        
+        <a href="https://discord.gg/dSyV646eBs">Discord</a>
+        
+        <a href="https://github.com/stampby/halo-ai">GitHub</a>
+        
+    </div>
+</nav>
+
+    <main>
+        
+<div class="container narrow content">
+    <h1>Installation</h1>
+    
+    <h1 id="installation">Installation</h1>
+<p>halo-ai installs with two commands. No containers, no cloud dependencies, no telemetry. Everything runs on your machine.</p>
+<h2 id="requirements">Requirements</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Component</th>
+          <th>Minimum</th>
+          <th>Recommended</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>RAM</td>
+          <td>16 GB</td>
+          <td>64 GB+</td>
+      </tr>
+      <tr>
+          <td>GPU</td>
+          <td>AMD or NVIDIA (Vulkan capable)</td>
+          <td>AMD Radeon 8060S or better</td>
+      </tr>
+      <tr>
+          <td>Storage</td>
+          <td>20 GB free</td>
+          <td>50 GB+ (models will use space)</td>
+      </tr>
+      <tr>
+          <td>OS</td>
+          <td>Linux (systemd)</td>
+          <td>Arch Linux / CachyOS</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="supported-distributions">Supported Distributions</h2>
+<ul>
+<li><strong>Arch Linux</strong> &ndash; first-class support, tested daily</li>
+<li><strong>CachyOS</strong> &ndash; Arch-based, performance-tuned, fully compatible</li>
+<li><strong>Ubuntu 22.04+</strong> &ndash; supported</li>
+<li><strong>Fedora 39+</strong> &ndash; supported</li>
+</ul>
+<h2 id="quick-start">Quick Start</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/halo-ai-official/halo-ai.git
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">cd</span> halo-ai
+</span></span><span style="display:flex;"><span>./install.sh
+</span></span></code></pre></div><p>The installer detects your hardware, configures GPU acceleration, pulls models, and stands up all 33 services. On AMD Strix Halo hardware, expect full deployment in under ten minutes.</p>
+<h2 id="what-gets-installed">What Gets Installed</h2>
+<p>halo-ai deploys 33 interconnected services covering inference, voice synthesis, speech recognition, image generation, code analysis, security monitoring, and autonomous agent coordination. Each service is managed through systemd and can be individually started, stopped, or inspected.</p>
+<h2 id="amd-strix-halo-optimization">AMD Strix Halo Optimization</h2>
+<p>The installer applies hardware-specific tuning for Strix Halo systems automatically. This includes Vulkan backend selection, Flash Attention enablement, memory allocation strategies for LPDDR5x, and fan curve profiles. If you are running on a Strix Halo machine, halo-ai will find it and use every watt.</p>
+<h2 id="post-install">Post-Install</h2>
+<p>After installation completes, open your browser and navigate to your local halo-ai instance. The Man Cave dashboard will be waiting.</p>
+<p>For troubleshooting, architecture details, and service documentation, see the <a href="/docs/">Documentation</a> hub.</p>
+<p><em>Designed and built by the architect.</em></p>
+
+    
+</div>
+
+    </main>
+    <footer>
+    <p><a href="/">halo-ai.studio</a> · <a href="https://github.com/stampby/halo-ai">GitHub</a> · <a href="https://discord.gg/dSyV646eBs">Discord</a> · <a href="https://halo-ai.ca">halo-ai.ca</a></p>
+    <p class="architect">Designed and built by the architect.</p>
+</footer>
+
+</body>
+</html>

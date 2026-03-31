@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Benchmarks | halo-ai — Local AI, Zero Cloud</title>
+<meta name="description" content="Real performance numbers from halo-ai running on AMD Strix Halo hardware. No synthetic loads, no cherry-picking.">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+
+</head>
+<body>
+    <nav>
+    <a href="/" class="logo">halo-<span>ai</span></a>
+    <div class="links">
+        
+        <a href="/">Home</a>
+        
+        <a href="/install/">Install</a>
+        
+        <a href="/docs/">Docs</a>
+        
+        <a href="/agents/">Agents</a>
+        
+        <a href="/benchmarks/">Benchmarks</a>
+        
+        <a href="/games/">Games</a>
+        
+        <a href="/voice/">Voice</a>
+        
+        <a href="/blog/">Blog</a>
+        
+        <a href="https://discord.gg/dSyV646eBs">Discord</a>
+        
+        <a href="https://github.com/stampby/halo-ai">GitHub</a>
+        
+    </div>
+</nav>
+
+    <main>
+        
+<div class="container narrow content">
+    <h1>Benchmarks</h1>
+    
+    <h1 id="benchmarks">Benchmarks</h1>
+<p>These numbers come from production workloads on real hardware. Nothing synthetic, nothing cherry-picked.</p>
+<h2 id="hardware">Hardware</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Component</th>
+          <th>Specification</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CPU</td>
+          <td>AMD Ryzen AI MAX+ 395</td>
+      </tr>
+      <tr>
+          <td>Memory</td>
+          <td>128 GB LPDDR5x-8000</td>
+      </tr>
+      <tr>
+          <td>GPU</td>
+          <td>AMD Radeon 8060S (gfx1151)</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="model">Model</h2>
+<p><strong>Qwen3-30B-A3B</strong> &ndash; Mixture of Experts architecture. 30 billion parameters, 3 billion active per token. The sweet spot between capability and speed on local hardware.</p>
+<h2 id="vulkan--flash-attention">Vulkan + Flash Attention</h2>
+<p>The primary backend. Vulkan with Flash Attention enabled delivers the best throughput on Strix Halo.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Metric</th>
+          <th>Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Generation speed</td>
+          <td>86 tok/s</td>
+      </tr>
+      <tr>
+          <td>Prompt processing</td>
+          <td>178 &ndash; 444 tok/s</td>
+      </tr>
+      <tr>
+          <td>Time to first token</td>
+          <td>&lt; 110 ms</td>
+      </tr>
+      <tr>
+          <td>GPU utilization</td>
+          <td>97%</td>
+      </tr>
+      <tr>
+          <td>GPU temperature</td>
+          <td>55 C</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="hip--rocm">HIP / ROCm</h2>
+<p>The alternative backend for workloads that require ROCm compatibility.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Metric</th>
+          <th>Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Generation speed</td>
+          <td>70 tok/s</td>
+      </tr>
+      <tr>
+          <td>Prompt processing</td>
+          <td>217 &ndash; 302 tok/s</td>
+      </tr>
+      <tr>
+          <td>Time to first token</td>
+          <td>&lt; 110 ms</td>
+      </tr>
+      <tr>
+          <td>GPU utilization</td>
+          <td>97%</td>
+      </tr>
+      <tr>
+          <td>GPU temperature</td>
+          <td>55 C</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="summary">Summary</h2>
+<p>Vulkan with Flash Attention is the recommended backend for Strix Halo systems. The 86 tok/s generation speed means real-time conversational AI with no perceptible delay. Prompt processing peaks at 444 tok/s, making context ingestion nearly instantaneous for typical workloads.</p>
+<p>Time to first token stays under 110 milliseconds on both backends. The GPU holds steady at 97% utilization and 55 degrees Celsius &ndash; fully loaded, thermally comfortable.</p>
+<p>All inference runs locally. Nothing leaves your hardware.</p>
+<p><em>Designed and built by the architect.</em></p>
+
+    
+</div>
+
+    </main>
+    <footer>
+    <p><a href="/">halo-ai.studio</a> · <a href="https://github.com/stampby/halo-ai">GitHub</a> · <a href="https://discord.gg/dSyV646eBs">Discord</a> · <a href="https://halo-ai.ca">halo-ai.ca</a></p>
+    <p class="architect">Designed and built by the architect.</p>
+</footer>
+
+</body>
+</html>

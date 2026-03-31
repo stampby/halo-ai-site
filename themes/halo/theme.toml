@@ -1,0 +1,6 @@
+name = "halo"
+license = "MIT"
+description = "Dark theme for halo-ai"
+
+[author]
+  name = "the architect"

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://halo-ai.studio/benchmarks/</loc>
+  </url><url>
+    <loc>https://halo-ai.studio/categories/</loc>
+  </url><url>
+    <loc>https://halo-ai.studio/docs/</loc>
+  </url><url>
+    <loc>https://halo-ai.studio/blog/</loc>
+  </url><url>
+    <loc>https://halo-ai.studio/</loc>
+  </url><url>
+    <loc>https://halo-ai.studio/games/</loc>
+  </url><url>
+    <loc>https://halo-ai.studio/install/</loc>
+  </url><url>
+    <loc>https://halo-ai.studio/agents/</loc>
+  </url><url>
+    <loc>https://halo-ai.studio/tags/</loc>
+  </url><url>
+    <loc>https://halo-ai.studio/voice/</loc>
+  </url>
+</urlset>
