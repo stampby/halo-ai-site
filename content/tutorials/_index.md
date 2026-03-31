@@ -131,6 +131,22 @@ description: "24 video walkthroughs — start to finish, nothing skipped. Termin
 
 ---
 
+## Live Demos — Watch the Agents Work
+
+### 25. Agent Self-Repair — kill a service, watch it come back
+We kill llama-server. Pulse detects. Halo repairs. Echo announces. 10 seconds. No human touched the keyboard.
+
+<div id="t25"></div>
+<script>AsciinemaPlayer.create('/tutorials/25-agent-repair.cast', document.getElementById('t25'), {speed: 1, theme: 'monokai', fit: 'width'});</script>
+
+### 26. Code Repair — push broken code, watch Sentinel fix it
+Bad commit pushed to main. Sentinel catches the syntax error, generates a fix with the LLM, opens a PR, reviews it, merges it. Bounty runs the tests. Echo announces. Autonomous.
+
+<div id="t26"></div>
+<script>AsciinemaPlayer.create('/tutorials/26-code-repair.cast', document.getElementById('t26'), {speed: 1, theme: 'monokai', fit: 'width'});</script>
+
+---
+
 Voice narration will be added to every tutorial once the architect's voice model is trained via Nexus. Two voice options planned — the architect's voice and a secondary narrator.
 
 No gatekeeping. No secrets. Everything shown.
