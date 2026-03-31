@@ -1,3 +1,47 @@
+// Language wheel — click to lock, saves preference
+function lockLang(lang, e) {
+    e.preventDefault();
+    localStorage.setItem('halo-lang', lang);
+    document.querySelectorAll('.lang-wheel a').forEach(a => a.classList.remove('lang-locked'));
+    e.target.classList.add('lang-locked');
+    // Brief flash then navigate
+    e.target.style.textShadow = '0 0 20px rgba(0,212,255,0.8)';
+    setTimeout(() => { window.location.href = '/' + lang + '/'; }, 300);
+}
+
+// On page load, check saved language preference
+(function() {
+    const saved = localStorage.getItem('halo-lang');
+    if (saved && !window.location.pathname.startsWith('/' + saved)) {
+        // Only redirect on first visit to root
+        if (window.location.pathname === '/') {
+            window.location.href = '/' + saved + '/';
+        }
+    }
+    // Scroll wheel support on language selector
+    const wheel = document.getElementById('langWheel');
+    if (wheel) {
+        wheel.addEventListener('wheel', function(e) {
+            e.preventDefault();
+            const items = [...wheel.querySelectorAll('a')];
+            const current = items.findIndex(a => a.classList.contains('lang-locked'));
+            let next;
+            if (e.deltaY > 0) {
+                next = Math.min(current + 1, items.length - 1);
+            } else {
+                next = Math.max(current - 1, 0);
+            }
+            if (next !== current && next >= 0) {
+                items.forEach(a => a.classList.remove('lang-locked'));
+                items[next].classList.add('lang-locked');
+                // Visual feedback
+                items[next].style.textShadow = '0 0 15px rgba(0,212,255,0.6)';
+                setTimeout(() => { items[next].style.textShadow = ''; }, 500);
+            }
+        });
+    }
+})();
+
 // Halo Orb — public site voice interaction (inquiries only)
 let chatOpen = false;
 

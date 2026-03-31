@@ -8,13 +8,12 @@
         <a href="{{ .URL }}"{{ if strings.HasPrefix .URL "http" }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}</a>
         {{ end }}
         {{ end }}
-        <div class="lang-dropdown">
-            <span class="lang-trigger">{{ $.Language.LanguageName }}</span>
-            <div class="lang-menu">
-                {{ range .Site.Languages }}
-                <a href="/{{ .Lang }}/" class="lang-option{{ if eq $.Language.Lang .Lang }} lang-active{{ end }}">{{ .LanguageName }}</a>
-                {{ end }}
-            </div>
-        </div>
     </div>
 </nav>
+
+<!-- Language wheel — right side, scroll, click to lock -->
+<div class="lang-wheel" id="langWheel">
+    {{ range .Site.Languages }}
+    <a href="/{{ .Lang }}/" data-lang="{{ .Lang }}" class="{{ if eq $.Language.Lang .Lang }}lang-locked{{ end }}" onclick="lockLang('{{ .Lang }}', event)">{{ .LanguageName }}</a>
+    {{ end }}
+</div>
