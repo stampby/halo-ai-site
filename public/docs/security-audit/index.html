@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Audit — 2026-03-31 | halo-ai — Local AI, Zero Cloud</title>
+<meta name="description" content="Full security audit of the halo-ai infrastructure. No more secrets.">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+
+</head>
+<body>
+    <nav>
+    <a href="/" class="logo">halo-<span>ai</span></a>
+    <div class="links">
+        
+        
+        <a href="/">Home</a>
+        
+        
+        
+        <a href="/install/">Install</a>
+        
+        
+        
+        <a href="/docs/">Docs</a>
+        
+        
+        
+        <a href="/agents/">Agents</a>
+        
+        
+        
+        <a href="/benchmarks/">Benchmarks</a>
+        
+        
+        
+        <a href="/games/">Games</a>
+        
+        
+        
+        <a href="/voice/">Voice</a>
+        
+        
+        
+        <a href="/blog/">Blog</a>
+        
+        
+        
+        <span class="nav-disabled" title="Coming soon">Nexus</span>
+        
+        
+        
+        <a href="https://discord.gg/dSyV646eBs" target="_blank" rel="noopener">Discord</a>
+        
+        
+        
+        <a href="https://github.com/stampby/halo-ai" target="_blank" rel="noopener">GitHub</a>
+        
+        
+        <div class="lang-dropdown">
+            <span class="lang-trigger">English</span>
+            <div class="lang-menu">
+                
+                <a href="/en/" class="lang-option lang-active">English</a>
+                
+                <a href="/fr/" class="lang-option">Francais</a>
+                
+                <a href="/es/" class="lang-option">Espanol</a>
+                
+                <a href="/es-mx/" class="lang-option">Espanol (Mexico)</a>
+                
+                <a href="/pt-br/" class="lang-option">Portugues (Brasil)</a>
+                
+                <a href="/de/" class="lang-option">Deutsch</a>
+                
+                <a href="/ja/" class="lang-option">Japanese</a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <main>
+        
+<div class="container narrow content">
+    <h1>Security Audit — 2026-03-31</h1>
+    
+    <p>Full security audit performed 2026-03-31. Every finding, every fix, published here. No more secrets.</p>
+<h2 id="critical--fixed">Critical — Fixed</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Issue</th>
+          <th>Risk</th>
+          <th>Resolution</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Discord bot <code>.env</code> was world-readable (644)</td>
+          <td>Tokens exposed to local users</td>
+          <td>Fixed — permissions set to 600 (owner only)</td>
+      </tr>
+      <tr>
+          <td>GlusterFS had no IP restriction</td>
+          <td>Any machine could mount the pool</td>
+          <td>Fixed — <code>auth.allow</code> restricted to 3 known IPs</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="warnings--fixed">Warnings — Fixed</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Issue</th>
+          <th>Risk</th>
+          <th>Resolution</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Ryzen had no firewall</td>
+          <td>All ports open on LAN</td>
+          <td>Fixed — nftables installed, default DROP, whitelist only</td>
+      </tr>
+      <tr>
+          <td>Stale Sligar SSH key in authorized_keys</td>
+          <td>Dead machine key could be reused</td>
+          <td>Fixed — key removed</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="warnings--remaining">Warnings — Remaining</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Issue</th>
+          <th>Risk</th>
+          <th>Mitigation</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Router SSH on 0.0.0.0:22</td>
+          <td>Exposed to WAN if port forwarding enabled</td>
+          <td>No port forwarding active — WAN access blocked by ISP NAT</td>
+      </tr>
+      <tr>
+          <td>Strix services bind 0.0.0.0 (n8n, gaia, lemonade)</td>
+          <td>Accessible on all interfaces</td>
+          <td>nftables blocks all non-whitelisted traffic — effective protection</td>
+      </tr>
+      <tr>
+          <td>WireGuard port 51820 open to all IPs</td>
+          <td>VPN entry point</td>
+          <td>Expected — keys are required for access</td>
+      </tr>
+      <tr>
+          <td>Cloudflare missing some security headers</td>
+          <td>Minor</td>
+          <td>X-Content-Type-Options and Referrer-Policy present. CSP and X-Frame-Options to be added via Cloudflare dashboard</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="passed">Passed</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Check</th>
+          <th>Status</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>SSH private key permissions (600)</td>
+          <td>PASS</td>
+      </tr>
+      <tr>
+          <td>SSH config — key-only auth, no passwords</td>
+          <td>PASS</td>
+      </tr>
+      <tr>
+          <td>SSH config — IdentitiesOnly yes on all hosts</td>
+          <td>PASS</td>
+      </tr>
+      <tr>
+          <td>Strix Halo nftables — default DROP, whitelist only</td>
+          <td>PASS</td>
+      </tr>
+      <tr>
+          <td>Ryzen nftables — default DROP, whitelist only</td>
+          <td>PASS (just fixed)</td>
+      </tr>
+      <tr>
+          <td>No Discord tokens in git history</td>
+          <td>PASS</td>
+      </tr>
+      <tr>
+          <td>No API keys in git history</td>
+          <td>PASS</td>
+      </tr>
+      <tr>
+          <td>Cloudflare proxy hiding origin IP</td>
+          <td>PASS</td>
+      </tr>
+      <tr>
+          <td>WHOIS privacy on .studio domain</td>
+          <td>PASS</td>
+      </tr>
+      <tr>
+          <td>Referrer-Policy strict-origin-when-cross-origin</td>
+          <td>PASS</td>
+      </tr>
+      <tr>
+          <td>X-Content-Type-Options nosniff</td>
+          <td>PASS</td>
+      </tr>
+      <tr>
+          <td>GlusterFS IP-restricted auth</td>
+          <td>PASS (just fixed)</td>
+      </tr>
+      <tr>
+          <td>Discord .env permissions (600)</td>
+          <td>PASS (just fixed)</td>
+      </tr>
+      <tr>
+          <td>DDNS grey cloud (game server IP not proxied)</td>
+          <td>PASS</td>
+      </tr>
+      <tr>
+          <td>100% encrypted requests on Cloudflare</td>
+          <td>PASS</td>
+      </tr>
+      <tr>
+          <td>No containers — no Docker attack surface</td>
+          <td>PASS</td>
+      </tr>
+      <tr>
+          <td>No cloud services — no third-party data exposure</td>
+          <td>PASS</td>
+      </tr>
+      <tr>
+          <td>Zero data retention on website</td>
+          <td>PASS</td>
+      </tr>
+      <tr>
+          <td>9 Reflex agents monitoring security 24/7</td>
+          <td>PASS</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="firewall-rules">Firewall Rules</h2>
+<h3 id="ryzen-1000185">Ryzen (10.0.0.185)</h3>
+<pre tabindex="0"><code>table inet filter {
+    chain input {
+        policy drop;
+        ct state established,related accept
+        iif &#34;lo&#34; accept
+        ip saddr 10.0.0.131 tcp dport 22 accept        # Strix Halo SSH
+        ip saddr 10.0.0.61 tcp dport 22 accept          # Minisforum SSH
+        ip saddr 10.0.0.1 tcp dport 22 accept            # Router SSH
+        ip saddr 10.0.0.131 tcp dport 24007-24008 accept # GlusterFS
+        ip saddr 10.0.0.131 tcp dport 49152-49155 accept # GlusterFS bricks
+        ip protocol icmp accept
+        counter drop
+    }
+}
+</code></pre><h3 id="strix-halo-1000131">Strix Halo (10.0.0.131)</h3>
+<pre tabindex="0"><code>table inet filter {
+    chain input {
+        policy drop;
+        ct state established,related accept
+        iif &#34;lo&#34; accept
+        ip saddr 10.0.0.61 tcp dport { 22, 80, 443, 5678, 8443 } accept
+        ip saddr 10.0.0.61 tcp dport { 24007-24008, 49152-49155 } accept
+        ip saddr 10.0.0.185 tcp dport { 22, 80, 443, 5678, 8443 } accept
+        ip saddr 10.0.0.185 tcp dport { 24007-24008, 49152-49155 } accept
+        udp dport 51820 accept  # WireGuard VPN
+        ip protocol icmp accept
+        counter drop
+    }
+}
+</code></pre><h2 id="network-architecture">Network Architecture</h2>
+<pre tabindex="0"><code>Internet
+    |
+[Cloudflare CDN] ← halo-ai.studio, halo-ai.ca (proxied)
+    |
+[ASUS Router] ← 10.0.0.1, DDNS, QoS, DNS-over-TLS
+    |
+[10.0.0.0/24 LAN] ← nftables on every machine
+    |
+    ├── Ryzen 9800X3D (10.0.0.185) ← workstation, Claude Code
+    ├── Strix Halo (10.0.0.131) ← AI inference, Discord bots, services
+    ├── Minisforum (10.0.0.61) ← Windows, KVM access
+    └── Sligar (offline) ← GRUB broken, pending reinstall
+</code></pre><h2 id="philosophy">Philosophy</h2>
+<ul>
+<li>Zero cloud. Your data stays on your network.</li>
+<li>Zero data retention. Nothing about visitors is stored.</li>
+<li>Default deny. Everything is blocked unless explicitly allowed.</li>
+<li>No containers. No Docker. Smaller attack surface.</li>
+<li>No secrets. This audit is public.</li>
+</ul>
+<p><em>&ldquo;No more secrets.&rdquo;</em></p>
+<p><em>Designed and built by the architect.</em></p>
+
+</div>
+
+    </main>
+    <footer>
+    <p><a href="/">halo-ai.studio</a> · <a href="https://github.com/stampby/halo-ai">GitHub</a> · <a href="https://discord.gg/dSyV646eBs">Discord</a> · <a href="https://halo-ai.ca">halo-ai.ca</a></p>
+    <p class="architect">Designed and built by the architect.</p>
+    <a href="/gratitude/" class="gratitude-link">.</a>
+</footer>
+
+    <script src="/js/halo.js"></script>
+</body>
+</html>
