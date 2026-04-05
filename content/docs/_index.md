@@ -18,7 +18,7 @@ Host a multilingual website for $13/yr. Hugo + Cloudflare Pages. The full recipe
 ## Core Documentation
 
 ### Architecture
-The full system architecture: 33 services, 27 agents, inter-service communication, and hardware abstraction layers.
+The full system architecture: 33 services, 17 agents, inter-service communication, and hardware abstraction layers.
 [Read the docs](https://github.com/stampby/halo-ai/blob/main/docs/ARCHITECTURE.md)
 
 ### Services

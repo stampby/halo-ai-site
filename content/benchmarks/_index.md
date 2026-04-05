@@ -24,7 +24,7 @@ The primary backend. Vulkan with Flash Attention enabled delivers the best throu
 
 | Metric | Value |
 |--------|-------|
-| Generation speed | 86 tok/s |
+| Generation speed | 236 tok/s |
 | Prompt processing | 178 -- 444 tok/s |
 | Time to first token | < 110 ms |
 | GPU utilization | 97% |
@@ -44,7 +44,7 @@ The alternative backend for workloads that require ROCm compatibility.
 
 ## Summary
 
-Vulkan with Flash Attention is the recommended backend for Strix Halo systems. The 86 tok/s generation speed means real-time conversational AI with no perceptible delay. Prompt processing peaks at 444 tok/s, making context ingestion nearly instantaneous for typical workloads.
+Vulkan with Flash Attention is the recommended backend for Strix Halo systems. The 236 tok/s generation speed means real-time conversational AI with no perceptible delay. Prompt processing peaks at 444 tok/s, making context ingestion nearly instantaneous for typical workloads.
 
 Time to first token stays under 110 milliseconds on both backends. The GPU holds steady at 97% utilization and 55 degrees Celsius -- fully loaded, thermally comfortable.
 

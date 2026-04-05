@@ -37,7 +37,7 @@ description: "24 video walkthroughs — start to finish, nothing skipped. Termin
 
 ## The Stack
 
-### 6. Lemonade + llama.cpp — unified API, 87 tok/s
+### 6. Lemonade + llama.cpp — unified API, 236 tok/s
 <div id="t06"></div>
 <script>AsciinemaPlayer.create('/tutorials/06-free-website.cast', document.getElementById('t06'), {speed: 1.5, theme: 'monokai', fit: 'width'});</script>
 
@@ -65,7 +65,7 @@ description: "24 video walkthroughs — start to finish, nothing skipped. Termin
 <div id="t11"></div>
 <script>AsciinemaPlayer.create('/tutorials/11-workflows.cast', document.getElementById('t11'), {speed: 1.5, theme: 'monokai', fit: 'width'});</script>
 
-### 12. The Agents — Gaia UI, all 27 agents, management
+### 12. The Agents — Gaia UI, all 17 agents, management
 <div id="t12"></div>
 <script>AsciinemaPlayer.create('/tutorials/12-agents.cast', document.getElementById('t12'), {speed: 1.5, theme: 'monokai', fit: 'width'});</script>
 

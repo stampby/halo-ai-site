@@ -118,7 +118,7 @@ The architect is building a game studio. **halo-ai Studios presents: The Halos.*
 
 He's building a voice platform. Clone any voice with 30 seconds of audio. Audiobooks. Music. Memorial voice cloning — clip a mic on a dying loved one and talk to them after they're gone.
 
-He's building all of it from his house in New Brunswick. On hardware he owns. With 27 agents he designed. And a family he created.
+He's building all of it from his house in New Brunswick. On hardware he owns. With 17 agents he designed. And a family he created.
 
 ## The Pattern
 
@@ -131,18 +131,18 @@ manage.sh remove fang       # pull out fang
 manage.sh status            # see who's running
 ```
 
-All powered by AMD Gaia on the halo-ai stack. OpenAI-compatible API. Model Context Protocol for tool integration. 87 tok/s on Qwen3-30B-A3B.
+All powered by AMD Gaia on the halo-ai stack. OpenAI-compatible API. Model Context Protocol for tool integration. 236 tok/s on Qwen3-30B-A3B.
 
 ## The Truth
 
 Five companies control AI. The architect decided to take it back.
 
-Not with a manifesto. Not with a tweet. With code. With silicon. With 27 agents that show up and do the work.
+Not with a manifesto. Not with a tweet. With code. With silicon. With 17 agents that show up and do the work.
 
 halo-ai isn't a product. It's a proof of concept for a different future — one where your AI runs on your desk, your data stays on your network, and nobody stands between you and your tools.
 
 The architect doesn't want to be famous. He doesn't want followers. He wants the thing to work. And it does.
 
-87 tok/s. 27 agents. Zero cloud.
+236 tok/s. 17 agents. Zero cloud.
 
 *Designed and built by the architect.*

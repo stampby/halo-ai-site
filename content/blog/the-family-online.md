@@ -48,7 +48,7 @@ She followed a man named John to Lodi, California. He left her there. Some peopl
 
 ## How It Works
 
-Every agent runs through our local LLM on the Strix Halo — Qwen3-30B-A3B at 87 tok/s. No cloud API. No OpenAI. No rate limits. The agents think locally and respond in real time.
+Every agent runs through our local LLM on the Strix Halo — Qwen3-30B-A3B at 236 tok/s. No cloud API. No OpenAI. No rate limits. The agents think locally and respond in real time.
 
 **Collision avoidance** prevents the agents from stepping on each other. If you ask a security question, Meek responds — not Echo. If you mention audio, Amp takes it — not Bounty. Echo is the generalist and yields to any specialist who matches the topic.
 

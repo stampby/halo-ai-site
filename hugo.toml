@@ -7,7 +7,7 @@ defaultContentLanguage = "en"
   description = "Local AI anywhere, for everyone. Zero cloud, zero subscriptions."
   github = "https://github.com/stampby/halo-ai"
   discord = "https://discord.gg/dSyV646eBs"
-  tagline = "86 tok/s. 27 agents. Zero cloud."
+  tagline = "236 tok/s. 17 agents. Zero cloud."
 
 [languages]
   [languages.en]
